@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700&display=swap" rel="stylesheet">
+        <title></title>
+    </head>
+    <body class="relative">
+        <header class="header header-basket">
+            <div class="header__mobile wrap basket-wrap">
+                <div class="header__mobile__nav header__mobile__nav-basket">
+                    <a href="index.html" class="header__mobile__nav__logo">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
+                            <img src="image/header/logo-mobile.png" width="31" height="31"> 
+                        </picture>
+                        <div class="header__mobile__nav__logo__name">
+                            <p class="header__mobile__nav__logo__text">Название</p>
+                            <span class="header__mobile__nav__logo__discription">Дискришн</span>
+                        </div>
+                    </a>
+
+                    <button class="header__toggle main-button" type="button"></button>          
+                    <button class="header__toggle main-button-desctop main-button-desctop-basket" type="button"></button>                
+                </div>
+            </div>
+            <!-- МОБИЛЬНАЯ ВСПЛЫВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__mobile-nav">
+                <div class="header__mobile-nav__main">
+                    <div class="header__mobile-nav__main__close"><button class="header__mobile-nav__main__close__button button-main-close" type="button"></button></div>
+                    <ul class="header__mobile-nav__main__list">
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-tel">
+                            <span>Телефон</span>
+                            <p>8 800 654 67 67</p>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__city">
+                            <div class="city-network">
+                                <span>Ваш город</span>
+                                <button class="button-city-open" type="button">Киров</button>                                
+                            </div>
+                            <div class="city-not-network">
+                                <span>Наш адрес</span>
+                                <p>г.Киров, ул. Ленина, 102А</p>                                
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__bonus">
+                            <span>Роман</span>
+                            <a href="#">36 бонусов</a>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__client">
+                            <span>Корзина</span>
+                            <div>
+                                <p>3 товара на</p>
+                                <a href="#">2 305 ₽</a>
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item">
+                            <ul class="header__mobile-nav__main__item__nav-list">
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Акции</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Отзывы</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Блог</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Личный кабинет</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Контакты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-about">
+                            <button class="button-open-about" type="button">О компании</button>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-popular">
+                            <button class="button-open-popular" type="button">Популярное </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__about">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-about" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-about" type="button"></button></div>
+                    <h2 class="header__mobile-nav__about-header">О компании</h2>
+                    <ul class="header__mobile-nav__about__list">
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Контакты</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Вакансии</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Команда</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Конфидициальность</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Соглашение</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__popular">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-popular" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-popular" type="button"></button></div>
+                    <h2 class="header__mobile-nav__popular__header">Популярное</h2>
+                    <ul class="header__mobile-nav__popular__list">
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Букеты из роз</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Сборные букеты</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Композиции</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Штучные цветы</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Свадебная флористика</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Мягкие игрушки</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__search">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-city" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-city" type="button"></button></div>
+                    <h2 class="header__mobile-nav__search__header">Ваш город</h2>
+                    <div>
+                        <input class="header__mobile-nav__search__input" type="text" placeholder="Поиск">                        
+                    </div>
+                    <ul class="header__mobile-nav__search__list">
+                        <li class="header__mobile-nav__search__item"><a href="#">Воронеж</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Йошкор-Ола</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Кирово-Чепецк</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Краснодар</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Москва</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Пермь</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Уфа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ДЕСКТОПНАЯ ВСПЫЛВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__desctop-navigation">
+                <ul class="header__desctop-navigation__list header__desctop-navigation__list-basket">
+                    <li class="header__desctop-navigation__item header__desctop-navigation__item-basket">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Акции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Отзывы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Блог</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Личный кабинет</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item header__desctop-navigation__item-basket">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">О компании</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Контакты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Вакансии</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Команда</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Конфидициальность</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Соглашение</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item header__desctop-navigation__item-basket">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list header__desctop-navigation__container__pocup header__desctop-navigation__container__pocup-basket">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Букеты из роз</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Сборные букеты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Композиции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Штучные цветы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Свадебная флористика</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Мягкие игрушки</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header> 
+
+        <main>
+            <section class="bread-crumbs-top wrap basket-wrap">
+                <ul class="bread-crumbs-top__list">
+                    <li class="bread-crumbs-top__item"><a href="#">Главная</a></li>
+                    <li class="bread-crumbs-top__item">Сборные букеты</li>
+                </ul>
+            </section>
+            <section class="basket basket-wrap"> 
+                <div class="basket__heade-wrap">
+                    <h2 class="basket__header">Корзина</h2>
+                    <div class="basket__promo">
+                        <input class="basket__promo__input" type="text" name="" id="" placeholder="Промокод">
+                        <button class="basket__promo__button" type="button">Применить</button>
+                    </div>                    
+                </div>
+                <ul class="basket__list">
+                    <li class="basket__item">
+                        <img class="basket__item__image" src="image/catalog/image-catalog-3.jpg" width="48" height="48">
+                        <div class="basket__item__block-header">
+                            <h2 class="basket__item__header">Летняя фантазия</h2>
+                            <span class="basket__item__block-button-mobile"><button class="basket__item__block-button-minus" type="button">-</button><span class="basket__item__block-button-number">1</span><button class="basket__item__block-button-plus" type="button">+</button></span>
+                        </div>
+                        <div class="basket__item__block-price">
+                            <span class="basket__item__block-price__bytton-desctop"><button class="basket__item__block-price__bytton-desctop__minus" type="button">-</button><span class="basket__item__block-price__bytton-desctop__number">1</span><button class="basket__item__block-price__bytton-desctop__plus" type="button">+</button></span>
+                            <div>
+                                <span class="basket__item__block-price__basket"></span>
+                                <p class="basket__item__price">2 390 ₽</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="basket__item">
+                        <img class="basket__item__image" src="image/basket/image-2.png" width="48" height="48">
+                        <div class="basket__item__block-header">
+                            <h2 class="basket__item__header">Букет из разных роз в коробке</h2>
+                            <span class="basket__item__block-button-mobile"><button class="basket__item__block-button-minus" type="button">-</button><span class="basket__item__block-button-number">1</span><button class="basket__item__block-button-plus" type="button">+</button></span>
+                        </div>
+                        <div class="basket__item__block-price">
+                            <span class="basket__item__block-price__bytton-desctop"><button class="basket__item__block-price__bytton-desctop__minus" type="button">-</button><span class="basket__item__block-price__bytton-desctop__number">1</span><button class="basket__item__block-price__bytton-desctop__plus" type="button">+</button></span>
+                            <div>
+                                <span class="basket__item__block-price__basket"></span>
+                                <p class="basket__item__price">1 230 ₽</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="basket__gift">
+                    <button class="basket__gift__button" type="button">
+                        Выбрать подарок
+                    </button>
+                    <p class="basket__gift__text">Доставим через 50−60 минут, бесплатно</p>
+                </div>
+            </section>
+            <section class="recommended basket-wrap">
+                <h2 class="recommended__header">Рекомендуем</h2>
+                <ul class="recommended__list">
+                    <li class="recommended__item">
+                        <button class="recommended__item__button" type="button">Сладости</button>
+                    </li>
+                    <li class="recommended__item">
+                        <button class="recommended__item__button" type="button">Фрукты</button>
+                    </li>
+                    <li class="recommended__item">
+                        <button class="recommended__item__button" type="button">Мягкие игрушки</button>
+                    </li>
+                    <li class="recommended__item">
+                        <button class="recommended__item__button" type="button">Шарики</button>
+                    </li>
+                    <li class="recommended__item">
+                        <button class="recommended__item__button" type="button">Десерты</button>
+                    </li>
+                </ul>
+                <div class="recommended__slide-wrap">
+                    <div class="recommended-slide-container swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-recommended-slide">
+                                <div class="recommended__box">
+                                    <img class="recommended__box__image" src="image/basket/image-corcunov.png" alt="" width="160" height="120">
+                                    <h2 class="recommended__box__text">Конфеты Коркунов</h2>
+                                    <div class="recommended__box__block-price">
+                                        <span class="recommended__box__price">680 ₽</span>
+                                        <button class="recommended__box__button" type="button">К заказу</button>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-recommended-slide">
+                                <div class="recommended__box">
+                                    <img class="recommended__box__image" src="image/basket/image-mersi.png" alt="" width="160" height="120">
+                                    <h2 class="recommended__box__text">Мерси</h2>
+                                    <div class="recommended__box__block-price">
+                                        <span class="recommended__box__price">500 ₽</span>
+                                        <button class="recommended__box__button" type="button">К заказу</button>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-recommended-slide">
+                                <div class="recommended__box">
+                                    <img class="recommended__box__image" src="image/basket/image-roshe.png" alt="" width="160" height="120">
+                                    <h2 class="recommended__box__text">Ферреро Роше</h2>
+                                    <div class="recommended__box__block-price">
+                                        <span class="recommended__box__price">610 ₽</span>
+                                        <button class="recommended__box__button" type="button">К заказу</button>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-recommended-slide">
+                                <div class="recommended__box">
+                                    <img class="recommended__box__image" src="image/basket/image-rafaelo.png" alt="" width="160" height="120">
+                                    <h2 class="recommended__box__text">Рафаелло</h2>
+                                    <div class="recommended__box__block-price">
+                                        <span class="recommended__box__price">420 ₽</span>
+                                        <button class="recommended__box__button" type="button">К заказу</button>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-recommended-slide">
+                                <div class="recommended__box">
+                                    <img class="recommended__box__image" src="image/basket/image-corcunov.png" alt="" width="160" height="120">
+                                    <h2 class="recommended__box__text">Конфеты Коркунов</h2>
+                                    <div class="recommended__box__block-price">
+                                        <span class="recommended__box__price">680 ₽</span>
+                                        <button class="recommended__box__button" type="button">К заказу</button>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended__swiper__shadow"></div>   
+                    </div>
+                    <div class="recommended__swiper__prev"></div>
+                    <div class="recommended__swiper__next"></div>                 
+                </div>
+            </section>
+            <section class="result">
+                <div class="result__wrap basket-wrap">
+                    <div class="result__text">
+                        Вы получите <span>36 бонусов</span>  с этого заказа. Сможете потратить на следующий 
+                    </div>
+                    <div class="result__box">
+                        <div class="result__box__price">
+                            <span>Итого</span>
+                            <p>4 347 ₽</p>
+                        </div>
+                        <button class="result__box__button" type="button">Оформить заказ</button>
+                    </div>                    
+                </div>
+            </section>
+        </main>
+        <!-- <div class="shadow-desctop"></div> -->
+        <div class="shadow-mode"></div>
+        <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
+            buttonOpenNavDesctopBasket.addEventListener('click', function(evt) {
+                evt.preventDefault();
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
+                document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
+            })  
+            const swipers = new Swiper('.recommended-slide-container', {
+                // Optional parameters
+            
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 55,
+                    },
+
+                    450: {
+                        slidesPerView: 3,
+                        spaceBetween: 105,
+                    },
+
+                    600: {
+                        slidesPerView: 4,
+                        spaceBetween: 105,
+                    },
+
+                    736: {
+                        slidesPerView: 3,
+                        spaceBetween: 105,
+                    },
+
+                    800: {
+                        slidesPerView: 4,
+                        spaceBetween: 225,
+                    },
+
+                    1250: {
+                        slidesPerView: 4,
+                        spaceBetween: 05,
+                    },
+                },
+                navigation: {
+                        nextEl: '.recommended__swiper__next',
+                        prevEl: '.recommended__swiper__prev',
+                    },
+                loop: true,
+            });
+
+            let buttonRecomend = document.querySelectorAll('.recommended__item__button');
+            console.log(buttonRecomend)
+            for(let i = 0; i < buttonRecomend.length; i++) {
+                buttonRecomend[i].addEventListener('click', function() {
+                    buttonRecomend[i].classList.toggle('recommended__item__button-active')
+                })
+            }
+        </script>
+    </body>
+</html>
+

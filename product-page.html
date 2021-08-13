@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700&display=swap" rel="stylesheet">
+        <title></title>
+    </head>
+    <body class="relative">
+        <header class="header">
+            <div class="header__mobile wrap">
+                <div class="header__mobile__nav">
+                    <a href="index.html" class="header__mobile__nav__logo">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
+                            <img src="image/header/logo-mobile.png" width="31" height="31"> 
+                        </picture>
+                        <div class="header__mobile__nav__logo__name">
+                            <p class="header__mobile__nav__logo__text">Название</p>
+                            <span class="header__mobile__nav__logo__discription">Дискришн</span>
+                        </div>
+                    </a>
+                    <div class="header__desctop-nav">
+                        <div class="header__desctop-nav__info">
+                            <div class="header__desctop-nav__info__bell">
+                                <p class="header__desctop-nav__info__bell__name">Звонок бесплатный</p>
+                                <span class="header__desctop-nav__info__tel"><a href='tel:8 800 654 67 67'>8 800 654 67 67</a></span>
+                            </div>
+                            <div class="header__desctop-nav__info__adress">
+                                <p>Наш адрес</p>
+                                <span>г.Киров, ул. Ленина, 102А</span>
+                            </div>
+                            <!-- <div class="header__desctop-nav__info__city">
+                                <p>Ваш город</p>
+                                <button type="button">Киров</span>
+                            </div> -->
+                        </div>
+
+                        <div class="header__desctop-nav__user">
+                            <ul class="header__desctop-nav__user__list">
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-messenger"><a href="#"></a></li>
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-serch">
+                                    <a href="#"></a>
+                                    <div class="serch__box">
+                                        <div class="serch__wrap">
+                                            <div class="serch__input-box">
+                                              <input class="serch__input" type="text" name="поиск" placeholder="Поиск" id="">  
+                                            </div>
+                                            <button class="serch__button" type="button">Искать</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-basket">
+                                    <a href="#">Корзина</a>
+                                    <div class="header__desctop-nav__user__item-basket__popup-container">
+                                        <div class="header__desctop-nav__user__item-basket__popup">
+                                            <ul class="header__desctop-nav__user__item-basket__popup__list">
+                                                <li class="header__desctop-nav__user__item-basket__popup__item">
+                                                    <div class="header__desctop-nav__user__item-basket__popup__item__box">
+                                                        <img class="header__desctop-nav__user__item-basket__popup__item__image" src="image/catalog/image-catalog.jpg">
+                                                        <div class="header__desctop-nav__user__item-basket__popup__item__container">
+                                                            <p class="header__desctop-nav__user__item-basket__popup__item__text">Летняя фантазия</p>
+                                                            <span class="header__desctop-nav__user__item-basket__popup__item__price">2 390 ₽</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="header__desctop-nav__user__item-basket__popup__item__basket"></span>
+                                                </li>
+                                            </ul>
+                                            <a class="header__desctop-nav__user__item-basket__popup__price" href="basket.html">Оформить заказ на 2 390 ₽</a>
+                                        </div>                                        
+                                    </div>
+                                </li>
+                                <li class="header__desctop-nav__user__item"><a href="#">Войти</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="header__toggle main-button" type="button"></button>          
+                    <button class="header__toggle main-button-desctop" type="button"></button>                
+                </div>
+            </div>
+            <div class="navigation-after-header">
+                <div class="navigation-after-header__container wrap">
+                    <ul class="navigation-after-header__list">
+                        <li class="navigation-after-header__item"><a href="#">Цветы</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Букеты из роз</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Сборные букеты</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Композиции</a></li>
+                        <li class="navigation-after-header__item"><a href="#">На праздник</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Подарки</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Комнатые растения</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Акции</a></li>
+                    </ul> 
+                    <a class="navigation-after-header__still" href="#">Еще</a>                   
+                </div>
+            </div>
+            <!-- МОБИЛЬНАЯ ВСПЛЫВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__mobile-nav">
+                <div class="header__mobile-nav__main">
+                    <div class="header__mobile-nav__main__close"><button class="header__mobile-nav__main__close__button button-main-close" type="button"></button></div>
+                    <ul class="header__mobile-nav__main__list">
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-tel">
+                            <span>Телефон</span>
+                            <p>8 800 654 67 67</p>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__city">
+                            <div class="city-network">
+                                <span>Ваш город</span>
+                                <button class="button-city-open" type="button">Киров</button>                                
+                            </div>
+                            <div class="city-not-network">
+                                <span>Наш адрес</span>
+                                <p>г.Киров, ул. Ленина, 102А</p>                                
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__bonus">
+                            <span>Роман</span>
+                            <a href="#">36 бонусов</a>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__client">
+                            <span>Корзина</span>
+                            <div>
+                                <p>3 товара на</p>
+                                <a href="#">2 305 ₽</a>
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item">
+                            <ul class="header__mobile-nav__main__item__nav-list">
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Акции</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Отзывы</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Блог</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Личный кабинет</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Контакты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-about">
+                            <button class="button-open-about" type="button">О компании</button>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-popular">
+                            <button class="button-open-popular" type="button">Популярное </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__about">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-about" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-about" type="button"></button></div>
+                    <h2 class="header__mobile-nav__about-header">О компании</h2>
+                    <ul class="header__mobile-nav__about__list">
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Контакты</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Вакансии</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Команда</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Конфидициальность</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Соглашение</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__popular">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-popular" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-popular" type="button"></button></div>
+                    <h2 class="header__mobile-nav__popular__header">Популярное</h2>
+                    <ul class="header__mobile-nav__popular__list">
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Букеты из роз</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Сборные букеты</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Композиции</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Штучные цветы</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Свадебная флористика</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Мягкие игрушки</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__search">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-city" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-city" type="button"></button></div>
+                    <h2 class="header__mobile-nav__search__header">Ваш город</h2>
+                    <div>
+                        <input class="header__mobile-nav__search__input" type="text" placeholder="Поиск">                        
+                    </div>
+                    <ul class="header__mobile-nav__search__list">
+                        <li class="header__mobile-nav__search__item"><a href="#">Воронеж</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Йошкор-Ола</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Кирово-Чепецк</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Краснодар</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Москва</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Пермь</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Уфа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ДЕСКТОПНАЯ ВСПЫЛВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__desctop-navigation">
+                <ul class="header__desctop-navigation__list">
+                    <li class="header__desctop-navigation__item">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Акции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Отзывы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Блог</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Личный кабинет</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">О компании</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Контакты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Вакансии</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Команда</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Конфидициальность</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Соглашение</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list header__desctop-navigation__container__pocup">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Букеты из роз</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Сборные букеты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Композиции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Штучные цветы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Свадебная флористика</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Мягкие игрушки</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header> 
+
+        <main>
+            <section class="bread-crumbs-top wrap">
+                <ul class="bread-crumbs-top__list">
+                    <li class="bread-crumbs-top__item"><a href="#">Главная</a></li>
+                    <li class="bread-crumbs-top__item">Сборные букеты</li>
+                </ul>
+            </section>
+            <section class="product wrap">
+                <div class="product-page--img">
+                    <div class="product-page-container swiper-container">
+                        <div class="product-page-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="product-page-img" src="image/catalog/image-catalog-2.jpg" width="300" height="213">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="product-page-img" src="image/catalog/image-catalog-4.jpg" width="300" height="213">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="product-page-img" src="image/catalog/image-catalog-5.jpg" width="300" height="213">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-page-min-container swiper-container">
+                        <div class="product-page-min-wrapper swiper-wrapper">
+                            <div class="img-min-slider swiper-slide">
+                                <div class="img-min-slider-img">
+                                    <img class="product-page-img--min" src="image/catalog/image-catalog-2.jpg" width="91" height="68">                                  
+                                </div>
+                            </div>
+                            <div class="img-min-slider swiper-slide">
+                                <div class="img-min-slider-img">
+                                    <img class="product-page-img--min" src="image/catalog/image-catalog-4.jpg" width="91" height="68">                                       
+                                </div>
+                            </div>
+                            <div class="img-min-slider swiper-slide">
+                                <div class="img-min-slider-img">  
+                                    <img class="product-page-img--min" src="image/catalog/image-catalog-5.jpg" width="91" height="68">                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__discription">
+                    <h2 class="product__discription__header">Летняя фантазия</h2>
+                    <span class="product__discription__subtitle">Арт. 089372</span>
+                    <ul class="product__discription__list">
+                        <li class="product__discription__item">
+                            <div class="product__discription__item__blick-images">
+                                <p class="product__discription__item__blick-text">Розовая роза</p>
+                                <img class="product__discription__item__blick-image" src="image/produkt.png" alt="">
+                            </div>
+                            <p class="product__discription__item__text">13 шт</p>
+                        </li>
+                        <li class="product__discription__item">
+                            <div class="product__discription__item__blick-images">
+                                <p class="product__discription__item__blick-text">Белая роза</p>
+                                <img class="product__discription__item__blick-image" src="image/produkt.png" alt="">
+                            </div>
+                            <p class="product__discription__item__text">7 шт</p>
+                        </li>
+                        <li class="product__discription__item">
+                            <div class="product__discription__item__blick-images">
+                                <p class="product__discription__item__blick-text">Сантини</p>
+                                <img class="product__discription__item__blick-image" src="image/produkt.png" alt="">
+                            </div>
+                            <p class="product__discription__item__text">3 шт</p>
+                        </li>
+                    </ul>
+                    <div class="product__discription__all"><button class='product__discription__all__button' type='button'>Весь состав</button></div>
+                    <div class="product__discription__price-block">
+                        <p class="product__discription__price">2 390 ₽</p>
+                        <span class="product__discription__price-old">2 765 ₽</span>
+                    </div>
+                    <div class="product__discription__buy-block">
+                        <a class="product__discription__buy" href='#'>Купить сейчас</a>
+                        <button class="product__discription__buy-basket" type="button">В корзину</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-wrap wrap">
+                <div class="footer-logo">
+                    <img class="footer__logo__img" src="image/footer/logo.png" width="37" height="37" alt="">
+                    <div class="footer__logo__text">
+                        <p>Название магазина</p>
+                        <span>Дискрипшн</span>
+                    </div>
+                </div>
+                <ul class="footer__list-wrap">
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-coperat">
+                            <li class="footer__item-coperat footer__item-logo">
+                                <img class="footer__item-logo__img" src="image/footer/logo.png" width="58" height="58" alt="">
+                                <div class="footer__item-logo__text">
+                                    <p>Название магазина</p>
+                                    <span>Дискрипшн</span>
+                                </div>
+                            </li>
+                            <li class="footer__item-coperat">
+                                <a class="footer-social footer-social-vk" href=""></a>
+                                <a class="footer-social footer-social-teleg" href=""></a>
+                                <a class="footer-social footer-social-inst" href=""></a>
+                            </li>
+                            <li class="footer__item-coperat footer__item-coperat-file">
+                                <a href="#">Реквизиты</a>
+                            </li>
+                            <li class="footer__item-coperat footer__item-coperat-confend">
+                                <a href="">Конфиденциальность</a>
+                            </li>
+                            <li class="footer__item-coperat footer__item-coperat-about">
+                                <a href="">О проекте</a>
+                            </li>
+                            <li class="footer__item-coperat footer__item__cooperat">
+                                © 2020, «Цветы Тут» Единая доставка цветов
+                            </li>
+
+                            <li class="footer__item-coperat footer__item__service">
+                                Service Digital Flowers
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-navigation">
+                            <li class="footer__item-navigation">Покупателям</li>
+                            <li class="footer__item-navigation"><a href="">Акции</a></li>
+                            <li class="footer__item-navigation"><a href="">Отзывы</a></li>
+                            <li class="footer__item-navigation"><a href="">Бонусная программа</a></li>
+                            <li class="footer__item-navigation"><a href="">Блог</a></li>
+                            <li class="footer__item-navigation"><a href="">Личный кабинет</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-navigation">
+                            <li class="footer__item-navigation">О компании</li>
+                            <li class="footer__item-navigation"><a href="">Контакты</a></li>
+                            <li class="footer__item-navigation"><a href="">Вакансии</a></li>
+                            <li class="footer__item-navigation"><a href="">Команда</a></li>
+                            <li class="footer__item-navigation"><a href="">Конфидициальность</a></li>
+                            <li class="footer__item-navigation"><a href="">Соглашение</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-navigation">
+                            <li class="footer__item-navigation">Популярное</li>
+                            <li class="footer__item-navigation"><a href="">Букеты из роз</a></li>
+                            <li class="footer__item-navigation"><a href="">Сборные букеты</a></li>
+                            <li class="footer__item-navigation"><a href="">Композиции</a></li>
+                            <li class="footer__item-navigation"><a href="">Штучные цветы</a></li>
+                            <li class="footer__item-navigation"><a href="">Свадебная флористика</a></li>
+                            <li class="footer__item-navigation"><a href="">Мягкие игрушки</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- <div class="shadow-desctop"></div> -->
+        <div class="shadow-mode"></div>
+        <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            new Swiper('.product-page-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                thumbs: {
+                    swiper: {
+                        el: '.product-page-min-container',
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
+

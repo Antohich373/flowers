@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700&display=swap" rel="stylesheet">
+        <title></title>
+    </head>
+    <body class="relative">
+        <header class="header">
+            <div class="header__mobile wrap">
+                <div class="header__mobile__nav">
+                    <a href="index.html" class="header__mobile__nav__logo">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
+                            <img src="image/header/logo-mobile.png" width="31" height="31"> 
+                        </picture>
+                        <div class="header__mobile__nav__logo__name">
+                            <p class="header__mobile__nav__logo__text">Название</p>
+                            <span class="header__mobile__nav__logo__discription">Дискришн</span>
+                        </div>
+                    </a>
+                    <div class="header__desctop-nav">
+                        <div class="header__desctop-nav__info">
+                            <div class="header__desctop-nav__info__bell">
+                                <p class="header__desctop-nav__info__bell__name">Звонок бесплатный</p>
+                                <span class="header__desctop-nav__info__tel"><a href='tel:8 800 654 67 67'>8 800 654 67 67</a></span>
+                            </div>
+                            <div class="header__desctop-nav__info__adress">
+                                <p>Наш адрес</p>
+                                <span>г.Киров, ул. Ленина, 102А</span>
+                            </div>
+                            <!-- <div class="header__desctop-nav__info__city">
+                                <p>Ваш город</p>
+                                <button type="button">Киров</span>
+                            </div> -->
+                        </div>
+
+                        <div class="header__desctop-nav__user">
+                            <ul class="header__desctop-nav__user__list">
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-messenger"><a href="#"></a></li>
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-serch">
+                                    <a href="#"></a>
+                                    <div class="serch__box">
+                                        <div class="serch__wrap">
+                                            <div class="serch__input-box">
+                                              <input class="serch__input" type="text" name="поиск" placeholder="Поиск" id="">  
+                                            </div>
+                                            <button class="serch__button" type="button">Искать</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-basket">
+                                    <a href="#">Корзина</a>
+                                    <div class="header__desctop-nav__user__item-basket__popup-container">
+                                        <div class="header__desctop-nav__user__item-basket__popup">
+                                            <ul class="header__desctop-nav__user__item-basket__popup__list">
+                                                <li class="header__desctop-nav__user__item-basket__popup__item">
+                                                    <div class="header__desctop-nav__user__item-basket__popup__item__box">
+                                                        <img class="header__desctop-nav__user__item-basket__popup__item__image" src="image/catalog/image-catalog.jpg">
+                                                        <div class="header__desctop-nav__user__item-basket__popup__item__container">
+                                                            <p class="header__desctop-nav__user__item-basket__popup__item__text">Летняя фантазия</p>
+                                                            <span class="header__desctop-nav__user__item-basket__popup__item__price">2 390 ₽</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="header__desctop-nav__user__item-basket__popup__item__basket"></span>
+                                                </li>
+                                            </ul>
+                                            <a class="header__desctop-nav__user__item-basket__popup__price" href="basket.html">Оформить заказ на 2 390 ₽</a>
+                                        </div>                                        
+                                    </div>
+                                </li>
+                                <li class="header__desctop-nav__user__item"><a href="#">Войти</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="header__toggle main-button" type="button"></button>          
+                    <button class="header__toggle main-button-desctop" type="button"></button>                
+                </div>
+            </div>
+            <div class="navigation-after-header">
+                <div class="navigation-after-header__container wrap">
+                    <ul class="navigation-after-header__list">
+                        <li class="navigation-after-header__item"><a href="#">Цветы</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Букеты из роз</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Сборные букеты</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Композиции</a></li>
+                        <li class="navigation-after-header__item"><a href="#">На праздник</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Подарки</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Комнатые растения</a></li>
+                        <li class="navigation-after-header__item"><a href="#">Акции</a></li>
+                    </ul> 
+                    <a class="navigation-after-header__still" href="#">Еще</a>                   
+                </div>
+            </div>
+            <!-- МОБИЛЬНАЯ ВСПЛЫВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__mobile-nav">
+                <div class="header__mobile-nav__main">
+                    <div class="header__mobile-nav__main__close"><button class="header__mobile-nav__main__close__button button-main-close" type="button"></button></div>
+                    <ul class="header__mobile-nav__main__list">
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-tel">
+                            <span>Телефон</span>
+                            <p>8 800 654 67 67</p>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__city">
+                            <div class="city-network">
+                                <span>Ваш город</span>
+                                <button class="button-city-open" type="button">Киров</button>                                
+                            </div>
+                            <div class="city-not-network">
+                                <span>Наш адрес</span>
+                                <p>г.Киров, ул. Ленина, 102А</p>                                
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__bonus">
+                            <span>Роман</span>
+                            <a href="#">36 бонусов</a>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__client">
+                            <span>Корзина</span>
+                            <div>
+                                <p>3 товара на</p>
+                                <a href="#">2 305 ₽</a>
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item">
+                            <ul class="header__mobile-nav__main__item__nav-list">
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Акции</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Отзывы</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Блог</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Личный кабинет</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Контакты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-about">
+                            <button class="button-open-about" type="button">О компании</button>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-popular">
+                            <button class="button-open-popular" type="button">Популярное </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__about">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-about" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-about" type="button"></button></div>
+                    <h2 class="header__mobile-nav__about-header">О компании</h2>
+                    <ul class="header__mobile-nav__about__list">
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Контакты</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Вакансии</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Команда</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Конфидициальность</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Соглашение</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__popular">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-popular" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-popular" type="button"></button></div>
+                    <h2 class="header__mobile-nav__popular__header">Популярное</h2>
+                    <ul class="header__mobile-nav__popular__list">
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Букеты из роз</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Сборные букеты</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Композиции</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Штучные цветы</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Свадебная флористика</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Мягкие игрушки</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__search">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-city" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-city" type="button"></button></div>
+                    <h2 class="header__mobile-nav__search__header">Ваш город</h2>
+                    <div>
+                        <input class="header__mobile-nav__search__input" type="text" placeholder="Поиск">                        
+                    </div>
+                    <ul class="header__mobile-nav__search__list">
+                        <li class="header__mobile-nav__search__item"><a href="#">Воронеж</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Йошкор-Ола</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Кирово-Чепецк</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Краснодар</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Москва</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Пермь</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Уфа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ДЕСКТОПНАЯ ВСПЫЛВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__desctop-navigation">
+                <ul class="header__desctop-navigation__list">
+                    <li class="header__desctop-navigation__item">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Акции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Отзывы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Блог</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Личный кабинет</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">О компании</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Контакты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Вакансии</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Команда</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Конфидициальность</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Соглашение</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list header__desctop-navigation__container__pocup">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Букеты из роз</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Сборные букеты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Композиции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Штучные цветы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Свадебная флористика</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Мягкие игрушки</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header> 
+
+        <main>
+            <section class="bread-crumbs-top wrap">
+                <ul class="bread-crumbs-top__list">
+                    <li class="bread-crumbs-top__item"><a href="#">Главная</a></li>
+                </ul>
+            </section>
+           <section class="catalog catalog-prefabricated-flowers">
+               <h2 class="catalog__header wrap">Сборные букеты</h2>
+                <div class="catalog__category catalog__category-mobile wrap">
+                    <ul class="catalog__category__list">
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Монобукеты</button></li>
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Микс букеты</button></li>
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Недорогие букеты</button></li>
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Бизнес букеты</button></li>
+                    </ul>
+                </div>
+                <div class="catalog__filtr catalog__category-filtr  wrap">
+                    <h2 class="catalog__filtr__desctop">Сборные букеты</h2>
+                    <div class="catalog__filtr__block">
+                        <button class="catalog__filtr__button" type="button">Фильтры</button>    
+                        <span>2</span>
+                    </div>
+                    <div class="catalog__filtr__container">
+                        <button class="catalog__sort__button" type="button">
+                            Сначала быстрая доставка
+                        </button>      
+                        <ul class="catalog__sort__list">
+                            <li data-sort="Дешевые" class="catalog__sort__item"> Дешевые</li>
+                            <li data-sort="Дорогие" class="catalog__sort__item">Дорогие</li>
+                            <li data-sort="Быстрая доставка" class="catalog__sort__item">Быстрая доставка</li>
+                            <li data-sort="Обсуждаемые" class="catalog__sort__item">Обсуждаемые</li>
+                        </ul>                     
+                    </div>
+                </div>  
+                <div class="catalog__category catalog__category-desctop wrap">
+                    <ul class="catalog__category__list">
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Монобукеты</button></li>
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Микс букеты</button></li>
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Недорогие букеты</button></li>
+                        <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Бизнес букеты</button></li>
+                    </ul>
+                </div>
+               <div class="catalog__wrap catalog__prefabricated-flowers wrap">
+                    <div class="filter">
+                        <div class="filter__header">
+                            <h2>Фильтр</h2>    
+                            <div></div>                        
+                        </div>
+                        <div class="filter__forms">
+                            <form class="filter__form">
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Тип букета</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="all" id="all">
+                                            <label for="all">Все</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="from-roses" id="from-roses">
+                                            <label for="from-roses">Из роз</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="combined" id="combined">
+                                            <label for="combined">Сборный</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="composition" id="composition">
+                                            <label for="composition">Композиция</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="piece" id="piece">
+                                            <label for="piece">Цветы поштучно</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Событие</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="simply" id="simply">
+                                            <label for="simply">Просто так</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="march" id="march">
+                                            <label for="march">8 марта</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="birthday" id="birthday">
+                                            <label for="birthday">День рождения</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="date" id="date">
+                                            <label for="date">Свидание</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="anniversary" id="anniversary">
+                                            <label for="anniversary">Юбилей</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Кому</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="matter" id="matter">
+                                            <label for="matter">Не важно</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="mom" id="mom">
+                                            <label for="mom">Маме</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="wife" id="wife">
+                                            <label for="wife">Жене</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="girl" id="girl">
+                                            <label for="girl">Девушке</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="colleague" id="colleague">
+                                            <label for="colleague">Коллеге</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="men" id="men">
+                                            <label for="men">Мужчине</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Гамма</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="gentle" id="gentle">
+                                            <label for="gentle">Нежная</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="bright" id="bright">
+                                            <label for="bright">Яркая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="red" id="red">
+                                            <label for="red">Красная</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="pink" id="pink">
+                                            <label for="pink">Розовая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="yellow" id="yellow">
+                                            <label for="yellow">Желтая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="orange" id="orange">
+                                            <label for="orange">Оранжевая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="burgundy" id="burgundy">
+                                            <label for="burgundy">Бордовая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="purple" id="purple">
+                                            <label for="purple">Фиолетовая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="blue" id="blue">
+                                            <label for="blue">Синяя</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="white" id="white">
+                                            <label for="white">Белая</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Особенности</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="hit" id="hit">
+                                            <label for="hit">Хиты продаж</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="action" id="action">
+                                            <label for="action">Акции</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="new" id="new">
+                                            <label for="new">Новинки</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="reviews" id="reviews">
+                                            <label for="reviews">С отзывами</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="bonus" id="bonus">
+                                            <label for="bonus">Оплата бонусами</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="filter__close" type="button">
+
+                                </button>
+                                <div class="filter__reset">
+                                    <button class="filter__reset__button" type="button">Сбросить</button>
+                                    <button class="filter__show__button" type="button">Показать 85</button>
+                                </div>
+                            </form>
+                        </div>
+                        <button type="button" class="desctop-reset-all">Сбросить все фильтры</button>
+                        <div class="desctop-reset">Сбросить</div>
+                    </div>
+                    <div>
+                        <ul class="catalog__list">
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-2.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-3.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-4.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Фантастический букет</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-5.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Трехцветный летный букет</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item catalog-item-help">
+                                <h2 class="catalog-item-help__header">Не можете подобрать букет?</h2>
+                                <p class="catalog-item-help__text">Тогда воспользуйтесь услугами нашего флориста, способного создать и подобрать цветочную композицию для любого повода.</p>
+                                <button class="catalog-item-help__button" type="button">Подобрать букет</button>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-6.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-7.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-8.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-9.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-10.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <div class="catalog__item__price-box">
+                                            <span class="catalog__item__old-price">1 950 ₽</span>
+                                            <span class="catalog__item__price">1 350 ₽</span>
+                                        </div>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                                <span class="catalog__item__discount">
+
+                                </span>
+                                <div class="catalog__item__discount__price">
+                                   <h2 class="catalog__item__discount__price__header">Очень приятная скидка 23%</h2> 
+                                   <p class="catalog__item__discount__price__past">Старая цена <span>1950₽</span></p>
+                                   <p class="catalog__item__discount__price__new">Новая цена 1350₽</p>
+                                   <p class="catalog__item__discount__price__economy">Вы экономите 600₽</p>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="catalog__bread__crumbs">
+                            <button class="catalog__bread__crumbs__still" type="button"><p>Показать еще</p></button>
+                            <ul class="catalog__bread__crumbs__list">
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-ferst"><a href="#"></a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-prev"><a href="#"></a></li>
+                                <li class="catalog__bread__crumbs__item"><a href="#">1</a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-active"><a href="#">2</a></li>
+                                <li class="catalog__bread__crumbs__item"><a href="#">3</a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-next"><a href="#"></a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-last"><a href="#"></a></li>
+                            </ul>
+                            <div class="catalog__bread__crumbs__page">
+                                <p>Показано: с 1 по 15 из 46</p>
+                                <span>(всего 4 страниц)</span>
+                            </div>
+                        </div>                        
+                    </div>
+
+               </div>
+           </section>
+           <section class="how-choose wrap">
+                <h2 class="how-choose__heaader">Сборные букеты, как выбрать</h2>
+                <p class="how-choose__text">Каждый из нас понимает очевидную вещь: синтетическое тестирование говорит о возможностях распределения внутренних резервов и ресурсов. Кстати,  действия представителей оппозиции будут смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Мы вынуждены отталкиваться от того, что базовый вектор развития в значительной степени обусловливает важность инновационных методов управления процессами! И нет сомнений, что акционеры крупнейших компаний могут быть ограничены исключительно образом мышления.</p>
+           </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-wrap wrap">
+                <div class="footer-logo">
+                    <img class="footer__logo__img" src="image/footer/logo.png" width="37" height="37" alt="">
+                    <div class="footer__logo__text">
+                        <p>Название магазина</p>
+                        <span>Дискрипшн</span>
+                    </div>
+                </div>
+                <ul class="footer__list-wrap">
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-coperat">
+                            <li class="footer__item-coperat footer__item-logo">
+                                <img class="footer__item-logo__img" src="image/footer/logo.png" width="58" height="58" alt="">
+                                <div class="footer__item-logo__text">
+                                    <p>Название магазина</p>
+                                    <span>Дискрипшн</span>
+                                </div>
+                            </li>
+                            <li class="footer__item-coperat">
+                                <a class="footer-social footer-social-vk" href=""></a>
+                                <a class="footer-social footer-social-teleg" href=""></a>
+                                <a class="footer-social footer-social-inst" href=""></a>
+                            </li>
+                            <li class="footer__item-coperat footer__item-coperat-file">
+                                <a href="#">Реквизиты</a>
+                            </li>
+                            <li class="footer__item-coperat footer__item-coperat-confend">
+                                <a href="">Конфиденциальность</a>
+                            </li>
+                            <li class="footer__item-coperat footer__item-coperat-about">
+                                <a href="">О проекте</a>
+                            </li>
+                            <li class="footer__item-coperat footer__item__cooperat">
+                                © 2020, «Цветы Тут» Единая доставка цветов
+                            </li>
+
+                            <li class="footer__item-coperat footer__item__service">
+                                Service Digital Flowers
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-navigation">
+                            <li class="footer__item-navigation">Покупателям</li>
+                            <li class="footer__item-navigation"><a href="">Акции</a></li>
+                            <li class="footer__item-navigation"><a href="">Отзывы</a></li>
+                            <li class="footer__item-navigation"><a href="">Бонусная программа</a></li>
+                            <li class="footer__item-navigation"><a href="">Блог</a></li>
+                            <li class="footer__item-navigation"><a href="">Личный кабинет</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-navigation">
+                            <li class="footer__item-navigation">О компании</li>
+                            <li class="footer__item-navigation"><a href="">Контакты</a></li>
+                            <li class="footer__item-navigation"><a href="">Вакансии</a></li>
+                            <li class="footer__item-navigation"><a href="">Команда</a></li>
+                            <li class="footer__item-navigation"><a href="">Конфидициальность</a></li>
+                            <li class="footer__item-navigation"><a href="">Соглашение</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item-wrap">
+                        <ul class="footer__list-navigation">
+                            <li class="footer__item-navigation">Популярное</li>
+                            <li class="footer__item-navigation"><a href="">Букеты из роз</a></li>
+                            <li class="footer__item-navigation"><a href="">Сборные букеты</a></li>
+                            <li class="footer__item-navigation"><a href="">Композиции</a></li>
+                            <li class="footer__item-navigation"><a href="">Штучные цветы</a></li>
+                            <li class="footer__item-navigation"><a href="">Свадебная флористика</a></li>
+                            <li class="footer__item-navigation"><a href="">Мягкие игрушки</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- <div class="shadow-desctop"></div> -->
+        <div class="shadow-mode"></div>
+        <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            //ВЫСЛЫВАШКА ДЛЯ СОРТИРОВКИ
+            let buttonOpenSort = document.querySelector('.catalog__sort__button')
+
+            buttonOpenSort.addEventListener('click', function() {
+                document.querySelector('.catalog__sort__list').classList.toggle('catalog__sort__list-active')
+            })
+
+            let ItemSort = document.querySelectorAll('.catalog__sort__item')
+
+            for(let i = 0; i < ItemSort.length; i++) {
+                ItemSort[i].addEventListener('click', function() {
+                    let target = event.target;
+                    let plet = target.dataset.sort
+                    document.querySelector('.catalog__sort__button').innerHTML = plet
+                    document.querySelector('.catalog__sort__list').classList.remove('catalog__sort__list-active')
+                })
+            }
+
+            //ОТКРЫТИЕ ФИЛЬТРАЦИИ
+            let filtresOpen = document.querySelector('.catalog__filtr__button');
+                filtresOpen.addEventListener('click', function() {
+                document.querySelector('.filter').classList.add('filter-active')
+                document.querySelector('.filter__reset').classList.add('filter__reset-active')
+                document.querySelector('.shadow-mode').classList.add('shadow-mode-active')
+            })
+
+            //ЗАКРЫТИЕ ФИЛЬТРАЦИИ
+            let filtresClose = document.querySelector('.filter__close');
+            
+            filtresClose.addEventListener('click', function() {
+                document.querySelector('.filter').classList.remove('filter-active')
+                document.querySelector('.filter__reset').classList.remove('filter__reset-active')
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
+            })
+
+            //ОТКРЫТИЕ ИНПУТОВ ФИЛЬТРАЦИИ
+            let OpenFilter = document.querySelectorAll('.filter__form__type__header');
+            for(let i = 0; i < OpenFilter.length; i++) {
+                OpenFilter[i].addEventListener('click', function() {
+                    OpenFilter[i].classList.toggle('filter__form__type__header-active')
+                })
+            }
+
+            //СБРОСТЬ ФИЛЬТР 
+            let buttonResset = document.querySelector('.desctop-reset');
+
+            buttonResset.addEventListener('click', function() {
+                let form = document.querySelector('.filter__form');
+                let checbox = form.querySelectorAll("input[type=checkbox]");
+                checbox.forEach(function(el) {
+                    el.checked = false;
+                });
+            })
+            document.querySelector('.desctop-reset-all').addEventListener('click', function() {
+                let form = document.querySelector('.filter__form');
+                let checbox = form.querySelectorAll("input[type=checkbox]");
+                checbox.forEach(function(el) {
+                    el.checked = false;
+                });
+            })
+
+            document.querySelector('.filter__reset__button').addEventListener('click', function() {
+                let form = document.querySelector('.filter__form');
+                let checbox = form.querySelectorAll("input[type=checkbox]");
+                checbox.forEach(function(el) {
+                    el.checked = false;
+                });
+            })
+            
+            let buttonActivCategory = document.querySelectorAll('.catalog__category__item');
+
+            for(let i = 0; i < buttonActivCategory.length; i++) {
+                buttonActivCategory[i].addEventListener('click', function() {
+                    buttonActivCategory[i].classList.toggle('catalog__category__item-active')
+                })
+            }
+
+        </script>
+    </body>
+</html>
+
