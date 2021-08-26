@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/swiper.css" />
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700&display=swap" rel="stylesheet">
+        <title></title>
+    </head>
+    <body class="relative">
+        <header class="header header-basket">
+            <div class="header__mobile wrap basket-wrap">
+                <div class="header__mobile__nav header__mobile__nav-basket">
+                    <a href="index.html" class="header__mobile__nav__logo">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
+                            <img src="image/header/logo-mobile.png" width="31" height="31"> 
+                        </picture>
+                        <div class="header__mobile__nav__logo__name">
+                            <p class="header__mobile__nav__logo__text">Название</p>
+                            <span class="header__mobile__nav__logo__discription">Дискришн</span>
+                        </div>
+                    </a>
+
+                    <button class="header__toggle main-button" type="button"></button>          
+                    <button class="header__toggle main-button-desctop main-button-desctop-basket" type="button"></button>                
+                </div>
+            </div>
+            <!-- МОБИЛЬНАЯ ВСПЛЫВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__mobile-nav">
+                <div class="header__mobile-nav__main">
+                    <div class="header__mobile-nav__main__close"><button class="header__mobile-nav__main__close__button button-main-close" type="button"></button></div>
+                    <ul class="header__mobile-nav__main__list">
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-tel">
+                            <span>Телефон</span>
+                            <p>8 800 654 67 67</p>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__city">
+                            <div class="city-network">
+                                <span>Ваш город</span>
+                                <button class="button-city-open" type="button">Киров</button>                                
+                            </div>
+                            <div class="city-not-network">
+                                <span>Наш адрес</span>
+                                <p>г.Киров, ул. Ленина, 102А</p>                                
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__bonus">
+                            <span>Роман</span>
+                            <a href="#">36 бонусов</a>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item__client">
+                            <span>Корзина</span>
+                            <div>
+                                <p>3 товара на</p>
+                                <a href="#">2 305 ₽</a>
+                            </div>
+                        </li>
+                        <li class="header__mobile-nav__main__item">
+                            <ul class="header__mobile-nav__main__item__nav-list">
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Акции</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Отзывы</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Блог</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Личный кабинет</a></li>
+                                <li class="header__mobile-nav__main__item__nav-item"><a href="#">Контакты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-about">
+                            <button class="button-open-about" type="button">О компании</button>
+                        </li>
+                        <li class="header__mobile-nav__main__item header__mobile-nav__main__item-popular">
+                            <button class="button-open-popular" type="button">Популярное </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__about">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-about" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-about" type="button"></button></div>
+                    <h2 class="header__mobile-nav__about-header">О компании</h2>
+                    <ul class="header__mobile-nav__about__list">
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Контакты</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Вакансии</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Команда</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Конфидициальность</a></li>
+                        <li class="header__mobile-nav__about__list__item"><a href="#">Соглашение</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__popular">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-popular" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-popular" type="button"></button></div>
+                    <h2 class="header__mobile-nav__popular__header">Популярное</h2>
+                    <ul class="header__mobile-nav__popular__list">
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Букеты из роз</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Сборные букеты</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Композиции</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Штучные цветы</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Свадебная флористика</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="#">Мягкие игрушки</a></li>
+                    </ul>
+                </div>
+                <div class="header__mobile-nav__search">
+                    <div class="header__mobile-nav__main__close header__mobile-nav__main__prev"><button class="header__mobile-nav__main__button-prev button-prev-city" type="button">Назад</button><button class="header__mobile-nav__main__button-close button-close-city" type="button"></button></div>
+                    <h2 class="header__mobile-nav__search__header">Ваш город</h2>
+                    <div>
+                        <input class="header__mobile-nav__search__input" type="text" placeholder="Поиск">                        
+                    </div>
+                    <ul class="header__mobile-nav__search__list">
+                        <li class="header__mobile-nav__search__item"><a href="#">Воронеж</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Йошкор-Ола</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Кирово-Чепецк</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Краснодар</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Москва</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Пермь</a></li>
+                        <li class="header__mobile-nav__search__item"><a href="#">Уфа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ДЕСКТОПНАЯ ВСПЫЛВАЮЩАЯЯ НАВИГАЦИЯ -->
+            <div class="header__desctop-navigation">
+                <ul class="header__desctop-navigation__list header__desctop-navigation__list-basket">
+                    <li class="header__desctop-navigation__item header__desctop-navigation__item-basket">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Акции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Отзывы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Бонусная программа</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Блог</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Личный кабинет</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item header__desctop-navigation__item-basket">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">О компании</h2>
+                            <ul class="header__desctop-navigation__container__list">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Контакты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Вакансии</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Команда</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Конфидициальность</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Соглашение</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__desctop-navigation__item header__desctop-navigation__item-basket">
+                        <div class="header__desctop-navigation__container">
+                            <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
+                            <ul class="header__desctop-navigation__container__list header__desctop-navigation__container__pocup header__desctop-navigation__container__pocup-basket">
+                                <li class="header__desctop-navigation__container__item"><a href="#">Букеты из роз</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Сборные букеты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Композиции</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Штучные цветы</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Свадебная флористика</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="#">Мягкие игрушки</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header> 
+        <main>
+        <section class="bread-crumbs-top wrap basket-wrap">
+            <ul class="bread-crumbs-top__list">
+                <li class="bread-crumbs-top__item"><a href="index.html">Главная</a></li>
+                <li class="bread-crumbs-top__item"><a href="basket.html">Корзина</a></li>   
+            </ul>
+        </section>
+        <section class="place-order place-order-wrap">
+            <h2 class="place-order__header">Оформление заказа</h2>
+            <form method="POST">
+                <div class="place-order__who-deliver">
+                    <div class="place-order__who-deliver__box place-order__who-deliver__box-i">
+                        <input type="radio" class="visually-hidden place-order__who-deliver__box__radio" name="delivery" id="give-you">
+                        <label for="give-you">
+                            <div class="place-order__who-deliver__box__description">
+                                <h2 class="place-order__who-deliver__box__description__header">Подарю я</h2>
+                                <p class="place-order__who-deliver__box__description__text">Цветы <br> передадим вам</p>
+                                <div class="place-order__who-deliver__box__description__radio"></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="place-order__who-deliver__box place-order__who-deliver__box-courier">
+                        <input type="radio" class="visually-hidden place-order__who-deliver__box__radio" name="delivery" id="give-courier">
+                        <label for="give-courier">
+                            <div class="place-order__who-deliver__box__description">
+                                <h2 class="place-order__who-deliver__box__description__header">Подарит курьер</h2>
+                                <p class="place-order__who-deliver__box__description__text">Цветы доставит <br> и подарит курьер</p>
+                                <div class="place-order__who-deliver__box__description__radio"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <!-- ПОДАРИТ КУРЬЕР -->
+                <div class="recipient">
+                    <h2 class="recipient__header">Получатель</h2>
+                    <div class="recipient__input-box ">
+                        <input class="recipient__input" type="text" name="name" placeholder="Имя">
+                        <input class="recipient__input" type="tel" name="tel" placeholder="Телефон">
+                    </div>
+                </div>
+                <div class="note">
+                    <h2 class="note__header">Записка</h2>
+                    <p class="note__text">Получатель узнает от кого цветы, если напишете свое имя в записке</p>
+                    <div class="note__textarea-box">
+                        <textarea class="note__textarea" name="note" placeholder="Записка" maxlength="250"></textarea>              
+                        <span class="note__curent-textarea">250</span>          
+                    </div>
+                </div>
+                <!-- АДРЕС ДОСТАВКИ -->
+                <div class="delivery-address">
+                    <h2 class="delivery-address__header">Адрес доставки</h2>
+                    <!-- АДРЕС ДОСТАВКИ ЕСЛИ АДРЕСА НЕТ -->
+                    <div class="delivery-address__no-address">
+                        <div class="delivery-address__city">
+                            <p>Город</p>
+                            <div class="delivery-address__city-name">Киров</div> 
+                            <div class="delivery-address__city__list-wrap">
+                                <ul class="delivery-address__city__list">
+                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом колотушкина">
+                                        Улица пушкина дом колотушкина
+                                    </li>
+                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом барабашкина">
+                                        Улица пушкина дом барабашкина
+                                    </li>
+                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом барабаса">
+                                        Улица пушкина дом барабаса
+                                    </li>
+                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом коого">
+                                        Улица пушкина дом коого
+                                    </li>
+                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом парапам">
+                                        Улица пушкина дом парапам
+                                    </li>
+                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом папа">
+                                        Улица пушкина дом папа
+                                    </li>
+                                    <li class="delivery-address__city__item" data-city="нижний">
+                                        нижний
+                                    </li>
+                                </ul>                                
+                            </div>
+
+                        </div>
+                        <div class="delivery-address__house-wrap">
+                            <div class="delivery-address__house-street">
+                                <input type="text" placeholder="Улица">
+                            </div>
+                            <div class="delivery-address__house-box">
+                                <input class="delivery-address__house-input delivery-address__house-number" type="text" placeholder="Дом">
+                                <input class="delivery-address__house-input delivery-address__house-flat" placeholder="Квартира" type="text">
+                            </div>
+                        </div>
+                        <div class="unknown-location">
+                            <input type="checkbox" class='visually-hidden unknown-location' id="unknown-location">
+                            <label for="unknown-location">
+                                Не знаю где буду
+                                <p>Магазин вам позвонит и уточнит</p>
+                            </label>
+                        </div>                        
+                    </div>
+
+                    <!-- АДРЕС ДОСТАВКИ ПОДАРЮ Я ЕСЛИ ЕСТЬ АДРЕС -->
+                    <div class="delivery-address__there-address">
+                        <ul class="delivery-address__there-address__lsit">
+                            <li class="delivery-address__there-address__item">
+                                <input class="delivery-address__there-address__item__input visually-hidden" type="radio" id="adres-1" name="there-address">
+                                <label for="adres-1">Киров, Октябрьский пр-т, 120, кв 94</label>
+                            </li>
+                            <li class="delivery-address__there-address__item">
+                                <input class="delivery-address__there-address__item__input visually-hidden" type="radio" id="adres-2" name="there-address">
+                                <label for="adres-2">Кирово-Чепецк, ул. Советская, 45, кв 201</label>
+                            </li>
+                            <li class="delivery-address__there-address__item">
+                                <input class="delivery-address__there-address__item__input visually-hidden" type="radio" id="adres-3" name="there-address">
+                                <label for="adres-3">Новый адрес</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- КОГДА ДОСТАВИТЬ -->
+                <div class="when-deliver">
+                    <h2 class="when-deliver__header">Когда доставить?</h2>
+                    <div class="when-deliver__box">
+                        <div class="when-deliver__data">
+                            <div class="when-deliver__data-name">31 августа, завтра</div> 
+                            <p>Дата</p>
+                            <div class="when-deliver__data__list-wrap">
+                                <ul class="when-deliver__data__list">
+                                    <li class="when-deliver__data__item" data-date="32 августа, завтра">
+                                        32 августа, завтра
+                                    </li>
+                                    <li class="when-deliver__data__item" data-date="33 августа, завтра">
+                                        33 августа, завтра
+                                    </li>
+                                    <li class="when-deliver__data__item" data-date="34 августа, завтра">
+                                        34 августа, завтра
+                                    </li>
+                                    <li class="when-deliver__data__item" data-date="35 августа, завтра">
+                                        35августа, завтра
+                                    </li>
+                                    <li class="when-deliver__data__item" data-date="36 августа, завтра">
+                                        36 августа, завтра
+                                    </li>
+                                    <li class="when-deliver__data__item" data-date="37 августа, завтра">
+                                        37 августа, завтра
+                                    </li>
+                                    <li class="when-deliver__data__item" data-date="38 августа, завтра">
+                                        38 августа, завтра
+                                    </li>
+                                </ul>                                
+                            </div>
+                        </div>
+                        <input class="when-deliver__input-time" type="text" name="time" id="" placeholder="Время">   
+                    </div>
+                    <div class="when-deliver__quickly">
+                        <input type="checkbox" class="visually-hidden" name="" id="when-deliver__quickly-cheked">
+                        <label for="when-deliver__quickly-cheked">
+                            Как можно быстрее
+                            <p>Сегодня, к 18:15</p>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- НОМЕР ТЕЛЕФОНА -->
+                <div class="your-number">
+                    <h2 class="your-number__header">Ваш телефон</h2>
+                    <!-- ТЕКСТ ЕСЛИ ДОСТАВИТ КУРЬЕР -->
+                    <p class="your-number__text">Позвоним вам и расскажем как всё прошло</p>
+                    <div class="your-number__input-box">
+                        <p class="your-number__input-box-text">Телефон</p>
+                        <input type="tel" class="your-number__input" placeholder="8 (912) 738 69-42">
+                    </div>
+                </div>
+
+                <!-- СПОСОБ ОПЛАТЫ -->
+                <div class="payment-method">
+                    <h2 class="payment-method__header">Способ оплаты</h2>
+                    <ul class="payment-method__list">
+                        <li class="payment-method__item">
+                            <input class="payment-method__item-radio visually-hidden" type="radio" name="payment-method" id="online">
+                            <label for="online">Онлайн оплата</label>
+                        </li>
+                        <li class="payment-method__item">
+                            <input class="payment-method__item-radio visually-hidden" type="radio" name="payment-method" id="nal">
+                            <label for="nal">Онлайн оплата</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ИТОГ -->
+                <div class="result">
+                    <ul class="result__list">
+                        <li class="result__item">
+                            <h2 class="result__itme__header">Летняя фантазия</h2> <span class="result__item__quantity">1 шт</span> <p class="quantity__item__price">2 059 ₽</p>
+                        </li>
+                        <li class="result__item">
+                            <h2 class="result__itme__header">Конфеты Мерси</h2> <span class="result__item__quantity">1 шт</span> <p class="quantity__item__price">500 ₽</p>
+                        </li>
+                        <li class="result__item">
+                            <h2 class="result__itme__header">Доставка</h2>  <p class="quantity__item__price">230 ₽</p>
+                        </li>
+                        <li class="result__item">
+                            <h2 class="result__itme__header">Оплата бонусами</h2>  <p class="quantity__item__price">−35 ₽</p>
+                        </li>
+                    </ul>
+                    <div class="result__price">
+                        <span class="result__price__text">Итого</span>
+                        <p class="result__price__itog">2 674 ₽</p>
+                    </div>
+                    <button class="result__submit" type="submit">Перейти к оплате</button>
+                </div>
+            </form>
+        </section>
+
+        </main>
+        <div class="shadow-mode"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
+            buttonOpenNavDesctopBasket.addEventListener('click', function(evt) {
+                evt.preventDefault();
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
+                document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
+            })  
+
+            const ta = document.querySelector('.note__textarea') // textarea
+            const counter = document.querySelector('.note__curent-textarea') // счётчик
+
+
+            let onInput = function(evt) {
+                const length = evt.target.value.length
+                counter.textContent = 250 - length
+            }
+            ta.addEventListener('input', onInput)
+
+            /*ВЫБОР ГОРОДА*/
+            /*блок города*/
+            let choosingСity = document.querySelector('.delivery-address__city')
+            /*блок со списком городов*/
+            let choosingСityPopup = document.querySelector('.delivery-address__city__list-wrap')
+            /*список городов*/
+            let choosingСityItem = document.querySelectorAll('.delivery-address__city__item')
+            
+            choosingСity.addEventListener('click', function() {
+                choosingСityPopup.classList.toggle('delivery-address__city__list-wrap-active')
+            })
+            for(let i = 0; i < choosingСityItem.length; i++) {
+                choosingСityItem[i].addEventListener('click', function() {
+                    let target = event.target;
+                    let plet = target.dataset.city
+                    document.querySelector('.delivery-address__city-name').innerHTML = plet
+                })
+            }
+
+            /*ВЫБОР ДАТЫ*/
+            /*блок даты*/
+            let choosingDate = document.querySelector('.when-deliver__data')
+            /*блок со списком дат*/
+            let choosingDatePopup = document.querySelector('.when-deliver__data__list-wrap')
+            /*список дат*/
+            let choosingDateItem = document.querySelectorAll('.when-deliver__data__item')
+            
+            choosingDate.addEventListener('click', function() {
+                choosingDatePopup.classList.toggle('when-deliver__data__list-wrap-active')
+            })
+            for(let i = 0; i < choosingDateItem.length; i++) {
+                choosingDateItem[i].addEventListener('click', function() {
+                    let target = event.target;
+                    let plets = target.dataset.date
+                    document.querySelector('.when-deliver__data-name').innerHTML = plets
+                })
+            }
+        </script>
+    </body>
+</html>
+

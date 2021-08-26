@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style/swiper.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.css"/>
         <link rel="stylesheet" href="style/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -295,8 +296,16 @@
             </section>
             <section class="result">
                 <div class="result__wrap basket-wrap">
-                    <div class="result__text">
+                    <!-- <div class="result__text">
                         Вы получите <span>36 бонусов</span>  с этого заказа. Сможете потратить на следующий 
+                    </div> -->
+                    <div class="range-sacket__basket range-sacket style-1 wrapper m-b-50 m-t-50 p-l-r">
+                        <p class="range-sacket__text">Ваши бонусы: 56</p>
+                        <div class="slider-range m-b-20"></div>
+                        <div class="range-sacket__value">
+                            списат
+                            <span class="slider-range-value"></span>
+                        </div>
                     </div>
                     <div class="result__box">
                         <div class="result__box__price">
@@ -312,6 +321,7 @@
         <div class="shadow-mode"></div>
         <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
         <script src="js/script.js"></script>
         <script>
             let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
@@ -320,6 +330,7 @@
                 document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
                 document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
             })  
+
             const swipers = new Swiper('.recommended-slide-container', {
                 // Optional parameters
             
@@ -368,6 +379,48 @@
                     buttonRecomend[i].classList.toggle('recommended__item__button-active')
                 })
             }
+
+            var rangeSlider = document.querySelector(".slider-range");
+
+            noUiSlider.create(rangeSlider, {
+            start: [50],
+            connect: [true, false],
+            step: 0,
+            range: {
+                min: [0],
+                max: [56]
+            }
+            });
+
+            /* begin Value  */
+            var rangeSliderValueElement = document.querySelector(".slider-range-value");
+
+            rangeSlider.noUiSlider.on("update", function(values, handle) {
+            rangeSliderValueElement.innerHTML = Math.floor(values[handle]);
+            });
+            /* end Value  */
+
+            /* begin Tab */
+            var handle = rangeSlider.querySelector(".noUi-handle");
+
+            handle.setAttribute("tabindex", 0);
+
+            handle.addEventListener("click", function() {
+            this.focus();
+            });
+
+            handle.addEventListener("keydown", function(event) {
+            var value = Number(rangeSlider.noUiSlider.get());
+
+            switch (event.which) {
+                case 37:
+                rangeSlider.noUiSlider.set(value - 1);
+                break;
+                case 39:
+                rangeSlider.noUiSlider.set(value + 1);
+                break;
+            }
+            });
         </script>
     </body>
 </html>

@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style/swiper.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.css"/>
         <link rel="stylesheet" href="style/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -285,6 +286,20 @@
                         </div>
                         <div class="filter__forms">
                             <form class="filter__form">
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Цена</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <div class="filter__form-range style-2 wrapper m-b-50 p-l-r">
+                                                <div class="filter__form-range-wrap-input">
+                                                    <input type="text" class="input-with-keypress-0">
+                                                    <input type="text" class="input-with-keypress-1">                                            
+                                                </div>
+                                                <div class="slider-keypress m-b-20"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>  
                                 <div class="filter__form__type">
                                     <h2 class="filter__form__type__header filter__form__type__header-active">Тип букета</h2>
                                     <ul class="filter__form__type__list">
@@ -963,9 +978,27 @@
                 </ul>
             </div>
         </footer>
+        <div class="botton__navigation-mobile">
+            <ul class="botton__navigation-mobile__list">
+                <li class="botton__navigation-mobile__item">
+                    <img src="image/caalog.svg" width="24" height="24">
+                    <p>Каталог</p>
+                </li>
+                <li class="botton__navigation-mobile__item">
+                    <img src="image/action.svg" width="24" height="24">
+                    <p>Акции</p>
+                </li>
+                <li class="botton__navigation-mobile__item">
+                    <img src="image/basket.svg" width="24" height="24">
+                    <p>2 035 ₽</p>
+                    <span class="botton__navigation-mobile__item-basket">1</span>
+                </li>
+            </ul>
+        </div>
         <!-- <div class="shadow-desctop"></div> -->
         <div class="shadow-mode"></div>
         <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
         <script>
@@ -1169,7 +1202,7 @@
             })
             document.querySelector('.desctop-reset-all').addEventListener('click', function() {
                 let form = document.querySelector('.filter__form');
-                let checbox = form.querySelectorAll("input[type=checkbox]");
+                let checbox = form.querySelectorAll("input[type=radio]");
                 checbox.forEach(function(el) {
                     el.checked = false;
                 });
@@ -1182,6 +1215,106 @@
                     el.checked = false;
                 });
             })
+
+            var keypressSlider = document.querySelector(".slider-keypress");
+            var input0 = document.querySelector(".input-with-keypress-0");
+            var input1 = document.querySelector(".input-with-keypress-1");
+            var inputs = [input0, input1];
+
+            noUiSlider.create(keypressSlider, {
+            start: [20, 80],
+            connect: true,
+            step: 1,
+            range: {
+                min: [1],
+                max: [250]
+            }
+            });
+
+            /* начать Ввод  */
+
+            /* конечные Входы  */
+            keypressSlider.noUiSlider.on("update", function(values, handle) {
+            inputs[handle].value = values[handle];
+
+            /* начните прослушивать нажатие клавиши на входе */
+            function setSliderHandle(i, value) {
+                var r = [null, null];
+                r[i] = value;
+                keypressSlider.noUiSlider.set(r);
+            }
+
+            // Прослушивайте события нажатия клавиш в поле ввода.
+            inputs.forEach(function(input, handle) {
+                input.addEventListener("change", function() {
+                setSliderHandle(handle, this.value);
+                });
+
+                input.addEventListener("keydown", function(e) {
+                var values = keypressSlider.noUiSlider.get();
+                var value = Number(values[handle]);
+
+                // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+                var steps = keypressSlider.noUiSlider.steps();
+
+                // [down, up]
+                var step = steps[handle];
+
+                var position;
+
+                // 13 - это ввод,
+                // 38 - это ключевой момент,
+                // 40 - это ключ вниз.
+                switch (e.which) {
+                    case 13:
+                    setSliderHandle(handle, this.value);
+                    break;
+
+                    case 38:
+                    // Сделайте шаг вперед, увеличьте значение ползунка (вверх)
+                    position = step[1];
+
+                    // false = ни один шаг не установлен
+                    if (position === false) {
+                        position = 1;
+                    }
+
+                    // null = край ползунка
+                    if (position !== null) {
+                        setSliderHandle(handle, value + position);
+                    }
+
+                    break;
+
+                    case 40:
+                    position = step[0];
+
+                    if (position === false) {
+                        position = 1;
+                    }
+
+                    if (position !== null) {
+                        setSliderHandle(handle, value - position);
+                    }
+
+                    break;
+                }
+                });
+            });
+            /* завершение прослушивания нажатия клавиши на входе */
+            });
+            
+
+            // if(document.querySelector('.header__mobile-nav__main').classList.contains('header__mobile-nav__main-active')) 
+            // {
+            //     // disableScroll.on();
+            //     console.log('да')
+            // } else {
+            //     console.log('нет')
+            // }
+            // // else {
+            // //     disableScroll.off();
+            // // }
             
         </script>
     </body>
