@@ -988,12 +988,24 @@
                     <img src="image/action.svg" width="24" height="24">
                     <p>Акции</p>
                 </li>
-                <li class="botton__navigation-mobile__item">
+                <li class="botton__navigation-mobile__item botton__navigation-mobile__item-baskets">
                     <img src="image/basket.svg" width="24" height="24">
                     <p>2 035 ₽</p>
-                    <span class="botton__navigation-mobile__item-basket">1</span>
+                    <span class="botton__navigation-mobile__item-basket">1</span>                        
                 </li>
             </ul>
+        </div>
+        <div class="basket-mobile">
+            <ul class="basket-mobile__list">
+                <li class="basket-mobile__item">
+                    <h2 class="basket-mobile__item__header">Летняя фантазия</h2>
+                    <div class="basket-mobile__item__content">
+                        <p>50 минут</p>
+                        <p>1 350 ₽</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="basket-mobile__button" type="button">Оформить заказ</button>
         </div>
         <!-- <div class="shadow-desctop"></div> -->
         <div class="shadow-mode"></div>
@@ -1002,6 +1014,13 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
         <script>
+            let basketMobileBotton = document.querySelector('.botton__navigation-mobile__item-baskets')
+            
+            basketMobileBotton.addEventListener('click', function(evt) {
+                evt.preventDefault();
+                document.querySelector('.basket-mobile').classList.toggle('basket-mobile-active')
+            })
+
             const swiper = new Swiper('.preview-slide-container', {
          
                 navigation: {
@@ -1171,6 +1190,7 @@
                 document.querySelector('.filter').classList.add('filter-active')
                 document.querySelector('.filter__reset').classList.add('filter__reset-active')
                 document.querySelector('.shadow-mode').classList.add('shadow-mode-active')
+                bodys.classList.add('body-active')
             })
 
             //ЗАКРЫТИЕ ФИЛЬТРАЦИИ
@@ -1180,6 +1200,7 @@
                 document.querySelector('.filter').classList.remove('filter-active')
                 document.querySelector('.filter__reset').classList.remove('filter__reset-active')
                 document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
+                bodys.classList.remove('body-active')
             })
 
             //ОТКРЫТИЕ ИНПУТОВ ФИЛЬТРАЦИИ
@@ -1305,16 +1326,15 @@
             });
             
 
-            // if(document.querySelector('.header__mobile-nav__main').classList.contains('header__mobile-nav__main-active')) 
-            // {
-            //     // disableScroll.on();
-            //     console.log('да')
-            // } else {
-            //     console.log('нет')
+            if(document.querySelector('.header__mobile-nav__main').classList.contains('header__mobile-nav__main-active')) {
+                // disableScroll.on();
+                console.log('да')
+            } else {
+                console.log('нет')
+            }
+            // else {
+            //     disableScroll.off();
             // }
-            // // else {
-            // //     disableScroll.off();
-            // // }
             
         </script>
     </body>

@@ -27,6 +27,7 @@ let closeInternalNav = function(ButtonCloseBlock ,navCloseBlock, classNavCloseBl
 }
 
 let shadow = document.querySelector('.shadow-mode')
+let bodys = document.querySelector('.relative')
 
 // ОТКРЫТИЕ ГЛАВНОГО МЕНЮ  МОБАЙЛ
 let butttonMain = document.querySelector('.main-button');
@@ -35,6 +36,7 @@ butttonMain.addEventListener('click', function(evt) {
     evt.preventDefault();
     navMain.classList.add('header__mobile-nav__main-active')
     shadow.classList.add('shadow-mode-active')
+    bodys.classList.add('body-active')
 })
 //ЗАКРЫТЬ ГЛАВНОЕ МЕНЮ МОБАЙЛ
 let butttonCloseMain = document.querySelector('.button-main-close');
@@ -43,6 +45,7 @@ butttonCloseMain.addEventListener('click', function(evt) {
     evt.preventDefault();
     navMain.classList.remove('header__mobile-nav__main-active')
     shadow.classList.remove('shadow-mode-active')
+    bodys.classList.remove('body-active')
 })
 
 //ОТКРЫТИЕ ПОИСКА ПО ГОРОДАМ
@@ -91,4 +94,5 @@ let buttonOpenNavDesctop = document.querySelector('.main-button-desctop')
 buttonOpenNavDesctop.addEventListener('click', function(evt) {
     evt.preventDefault();
     document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action')
+    bodys.classList.toggle('body-active')
 })  
