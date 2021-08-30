@@ -496,11 +496,21 @@
                             </label>
                         </li>
                     </ul>
+                    <div class="gift-window__textarea">
+                        <h2 class="gift-window__textarea__header">Записка к открытке</h2>
+                        <textarea class="gift-window__textarea-text" name="" id="" cols="30" rows="10" placeholder="Записка"></textarea>
+                        <button class="gift-window__textarea-submit-desctop" type="submit">Отправить</button>
+                        <div class="gift-window__textarea__box-button">
+                            <button class="gift-window__textarea__box-button-prev" type="button">Назад</button>
+                            <button class="gift-window__textarea__box-button-submit" type="submit">Готово</button>
+                        </div>
+                    </div>
                     <div class="gift-window__form__button-box">
-                        <button type="button">Назад</button>
-                        <button type="button">Готово</button>
+                        <button class="gift-window__form__button-box__close" type="button">Отмена</button>
+                        <button class="gift-window__form__button-box__textarea" type="button">Написать записку</button>
                     </div>
                 </form>
+                <div class="gift-window__close"></div>
             </div>
         </div>
         <div class="shadow-mode"></div>
@@ -509,6 +519,49 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
         <script src="js/script.js"></script>
         <script>
+            //ОТКРЫТИЕ ЗАПИСКИ В ОТКРЫТКАХ НА МОБИЛЬНОЙ ВЕРСИИ
+            let openTextarea = document.querySelector('.gift-window__form__button-box__textarea');
+            openTextarea.addEventListener('click', function() {
+                document.querySelector('.gift-window__form__button-box').classList.add('gift-window__form__button-box-textaria')
+                document.querySelector('.gift-window__form__list').classList.add('gift-window__form__list-textaria')
+                document.querySelector('.gift-window__header').classList.add('gift-window__header-textarea')
+                document.querySelector('.gift-window').classList.add('gift-window-textarea')
+                document.querySelector('.gift-window__textarea').classList.add('gift-window__textarea-active')
+                document.querySelector('.gift-window__close').style = 'opacity: 0'
+            })
+
+            //ВЫЙТИ ИЗ ОКНА ВВОДА ЗАПИСКИ ОБРАТНО В ВЫБОР ОТКРЫТКИ МОБИЛКА
+            let prevTextarea = document.querySelector('.gift-window__textarea__box-button-prev')
+            prevTextarea.addEventListener('click', function() {
+                document.querySelector('.gift-window__form__button-box').classList.remove('gift-window__form__button-box-textaria')
+                document.querySelector('.gift-window__form__list').classList.remove('gift-window__form__list-textaria')
+                document.querySelector('.gift-window__header').classList.remove('gift-window__header-textarea')
+                document.querySelector('.gift-window').classList.remove('gift-window-textarea')
+                document.querySelector('.gift-window__textarea').classList.remove('gift-window__textarea-active')
+                document.querySelector('.gift-window__close').style = 'opacity: 1'
+            })
+
+            //ЗАКРЫТИЕ ЗАПИСКИ В ОТКРЫТКАХ НА МОБИЛЬНОЙ ВЕРСИИ
+            let closeTextarea = document.querySelector('.gift-window__form__button-box__close');
+            closeTextarea.addEventListener('click', function() {
+                document.querySelector('.gift-window__wrap').classList.remove('gift-window__wrap-active')
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
+            })
+
+            // ЗАКРЫТЬ ОКНО С ОТКРЫТКАМИ
+            let closeGift = document.querySelector('.gift-window__close') 
+            closeGift.addEventListener('click', function() {
+                document.querySelector('.gift-window__wrap').classList.remove('gift-window__wrap-active')
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
+            })
+
+            // ОТКРЫТЬ ОКНО С ОТКРЫТКАМИ
+            let openGift = document.querySelector('.basket__gift__button')
+            openGift.addEventListener('click', function() {
+                document.querySelector('.gift-window__wrap').classList.add('gift-window__wrap-active')
+                document.querySelector('.shadow-mode').classList.add('shadow-mode-active')
+            })
+
             //ОТКРЫТИЕ ЗАКРЫТИЕ ОКНА ВХОДА В АККАУНТ
             let buttonOpenRegister = document.querySelector('.header__mobile__nav__button-register')
             buttonOpenRegister.addEventListener('click', function() {
@@ -516,13 +569,13 @@
                 document.querySelector('.shadow-mode').classList.add('shadow-mode-active')
                 bodys.classList.add('body-active')
             })
-
             let buttonCloseRegister = document.querySelector('.log-account__close')
             buttonCloseRegister.addEventListener('click', function() {
                 document.querySelector('.modal-wrap').classList.remove('log-account-active')
                 document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
                 bodys.classList.remove('body-active')
             })
+
             //ОКНО РЕГИСТРАЦИИ
             let OpenRegistr = document.querySelector('.log-account__button')
             OpenRegistr.addEventListener('click', function() {
@@ -531,6 +584,7 @@
                 }, 300)
                 document.querySelector('.modal-wrap').classList.remove('log-account-active')
             })
+
             //ЗАКРЫТИЯ ОКНА РЕГИСТРАЦИИ
             let closeRegistr = document.querySelector('.registration__close')
             closeRegistr.addEventListener('click', function() {
@@ -538,6 +592,7 @@
                 document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')         
                 bodys.classList.remove('body-active')
             })
+
             //ЗАКРЫТИЕ ОКНА С ВВОДОМ КОДА ИЗ СМС
             let closeRegisterCode = document.querySelector('.registration-code__close')
             closeRegisterCode.addEventListener('click', function() {
@@ -616,24 +671,16 @@
 
             /* begin Value  */
             var rangeSliderValueElement = document.querySelector(".slider-range-value");
-
             rangeSlider.noUiSlider.on("update", function(values, handle) {
             rangeSliderValueElement.innerHTML = Math.floor(values[handle]);
             });
-            /* end Value  */
-
-            /* begin Tab */
             var handle = rangeSlider.querySelector(".noUi-handle");
-
             handle.setAttribute("tabindex", 0);
-
             handle.addEventListener("click", function() {
             this.focus();
             });
-
             handle.addEventListener("keydown", function(event) {
             var value = Number(rangeSlider.noUiSlider.get());
-
             switch (event.which) {
                 case 37:
                 rangeSlider.noUiSlider.set(value - 1);
