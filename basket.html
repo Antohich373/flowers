@@ -408,6 +408,56 @@
             </div>
         </div>
 
+        <!-- ОКНО ЕСЛИ ТЫ ПЕРВЫЙ РАЗ -->
+        <div class="first-time__wrap first-time__wrap-active">
+            <div class="first-time">
+                <div class="first-time__text">
+                    <h2 class="first-time__text__header">Войдите, что бы получить <span>36 бонусов</span>  с этого заказа</h2>
+                    <p class="first-time__text__subtitle">А если вы у нас впервые, <br> подарим скидку 10% на первый заказ</p>                    
+                </div>
+                <div class="first-time__entrance">
+                    <p class="first-time__entrance__text">Войдите через соцсети</p>
+                    <div class="first-time__entrance__box">
+                        <ul class="first-time__entrance__box__list">
+                            <li class="first-time__entrance__box__item first-time__entrance__box__item-google"><a href=""></a></li>
+                            <li class="first-time__entrance__box__item first-time__entrance__box__item-vk"><a href=""></a></li>
+                            <li class="first-time__entrance__box__item first-time__entrance__box__item-onoklass"><a href=""></a></li>
+                            <li class="first-time__entrance__box__item first-time__entrance__box__item-twitter"><a href=""></a></li>
+                            <li class="first-time__entrance__box__item first-time__entrance__box__item-facebok"><a href=""></a></li>
+                        </ul>
+                        <p class="first-time__entrance__box__text">или</p>
+                        <button class="first-time__entrance__box__button" type="button">По номеру</button>
+                    </div>
+                </div>
+                <div class="first-time__close"></div>
+            </div>
+        </div>
+
+        <!-- ВХОД ПО НОМЕРУ ТЕЛЕФОНА -->
+        <div class="log-number__wrap">
+            <div class="log-number">
+                <div class="log-number__box">
+                    <h2 class="log-number__box__header">Вход на сайт</h2> 
+                    <p class="log-number__box__text">Войдите, что бы получить 36 бонусов с этого заказа. А если это ваш первый заказ, подарим 10% скидки.</p>
+                    <form class="log-number__box__form" method="POST">
+                        <input class="log-number__box__input" type="tel" name="tel" placeholder="Телефон">
+                        <button class="log-number__box__submit" type="submit">Выслать код</button>
+                    </form>
+                </div>   
+                <div class="log-number__box-social">
+                    <p class="log-number__box-social__text">Или войдите через соцсети</p>
+                    <ul class="first-time__entrance__box__list log-number__box-social__list">
+                        <li class="first-time__entrance__box__item first-time__entrance__box__item-google"><a href=""></a></li>
+                        <li class="first-time__entrance__box__item first-time__entrance__box__item-vk"><a href=""></a></li>
+                        <li class="first-time__entrance__box__item first-time__entrance__box__item-onoklass"><a href=""></a></li>
+                        <li class="first-time__entrance__box__item first-time__entrance__box__item-twitter"><a href=""></a></li>
+                        <li class="first-time__entrance__box__item first-time__entrance__box__item-facebok"><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="log-number__close"></div>
+            </div>
+        </div>
+
         <!-- ВЫБОР ПОДАРКА -->
         <div class="gift-window__wrap">
             <div class="gift-window">
@@ -513,12 +563,39 @@
                 <div class="gift-window__close"></div>
             </div>
         </div>
-        <div class="shadow-mode"></div>
+        <div class="shadow-mode shadow-mode-active"></div>
         <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/mask.js"></script>
         <script>
+            $('[type=tel]').mask('+7 (999) 999-99-99')
+            //ОКНО ЕСЛИ ТЫ ПРЕВЫЙ РАЗ ЗАКРЫТЬ 
+            let closeFirstTime = document.querySelector('.first-time__close')
+            closeFirstTime.addEventListener('click', function() {
+                document.querySelector('.first-time__wrap').classList.remove('first-time__wrap-active')
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
+            })
+
+            //ПЕРЕХОД С ОКНА ЕСЛИ ТЫ ПЕРВЫЙ РАЗ НА ОКНО РЕГИСТРАЦИЯ ПО НОМЕРУ 
+            let opernLogNumber = document.querySelector('.first-time__entrance__box__button')
+            opernLogNumber.addEventListener('click', function() {
+                document.querySelector('.first-time__wrap').classList.remove('first-time__wrap-active')
+                setTimeout(function () {
+                    document.querySelector('.log-number__wrap').classList.add('log-number__wrap-active')              
+                }, 300)
+            })
+
+            //ЗАКРЫТЬ ОКНО РЕГИСТРАЦИЯ ПО НОМЕРУ
+            let closeLogNumber = document.querySelector('.log-number__close')
+            closeLogNumber.addEventListener('click', function() {
+                document.querySelector('.log-number__wrap').classList.remove('log-number__wrap-active')  
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')            
+            })
+
+
             //ОТКРЫТИЕ ЗАПИСКИ В ОТКРЫТКАХ НА МОБИЛЬНОЙ ВЕРСИИ
             let openTextarea = document.querySelector('.gift-window__form__button-box__textarea');
             openTextarea.addEventListener('click', function() {

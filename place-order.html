@@ -173,7 +173,7 @@
             <form method="POST">
                 <div class="place-order__who-deliver">
                     <div class="place-order__who-deliver__box place-order__who-deliver__box-i">
-                        <input type="radio" class="visually-hidden place-order__who-deliver__box__radio" name="delivery" id="give-you">
+                        <input type="radio" class="visually-hidden place-order__who-deliver__box__radio" name="delivery" id="give-you" checked>
                         <label for="give-you">
                             <div class="place-order__who-deliver__box__description">
                                 <h2 class="place-order__who-deliver__box__description__header">Подарю я</h2>
@@ -185,7 +185,7 @@
                     <div class="place-order__who-deliver__box place-order__who-deliver__box-courier">
                         <input type="radio" class="visually-hidden place-order__who-deliver__box__radio" name="delivery" id="give-courier">
                         <label for="give-courier">
-                            <div class="place-order__who-deliver__box__description">
+                            <div class="place-order__who-deliver__box__description place-order__who-deliver__box__description-curier">
                                 <h2 class="place-order__who-deliver__box__description__header">Подарит курьер</h2>
                                 <p class="place-order__who-deliver__box__description__text">Цветы доставит <br> и подарит курьер</p>
                                 <div class="place-order__who-deliver__box__description__radio"></div>
@@ -194,18 +194,18 @@
                     </div>
                 </div>
                 <!-- ПОДАРИТ КУРЬЕР -->
-                <div class="recipient">
+                <div class="recipient" style="display: none;">
                     <h2 class="recipient__header">Получатель</h2>
                     <div class="recipient__input-box ">
-                        <input class="recipient__input" type="text" name="name" placeholder="Имя">
-                        <input class="recipient__input" type="tel" name="tel" placeholder="Телефон">
+                        <input class="recipient__input recipient__input-name" type="text" name="name" placeholder="Имя" disabled>
+                        <input class="recipient__input recipient__input-tel" type="tel" name="tel" placeholder="Телефон" disabled>
                     </div>
                 </div>
-                <div class="note">
+                <div class="note" style="display: none;">
                     <h2 class="note__header">Записка</h2>
                     <p class="note__text">Получатель узнает от кого цветы, если напишете свое имя в записке</p>
                     <div class="note__textarea-box">
-                        <textarea class="note__textarea" name="note" placeholder="Записка" maxlength="250"></textarea>              
+                        <textarea class="note__textarea" name="note" placeholder="Записка" maxlength="250" disabled></textarea>              
                         <span class="note__curent-textarea">250</span>          
                     </div>
                 </div>
@@ -215,30 +215,31 @@
                     <!-- АДРЕС ДОСТАВКИ ЕСЛИ АДРЕСА НЕТ -->
                     <div class="delivery-address__no-address">
                         <div class="delivery-address__city">
-                            <p>Город</p>
+                            <p class="delivery-address__city-text">Город</p>
+                            <input class="delivery-address__city-input visually-hidden" type="text" name="city" id="city-input">
                             <div class="delivery-address__city-name">Киров</div> 
                             <div class="delivery-address__city__list-wrap">
                                 <ul class="delivery-address__city__list">
-                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом колотушкина">
-                                        Улица пушкина дом колотушкина
+                                    <li class="delivery-address__city__item" data-city="Нижний">
+                                        Нижний
                                     </li>
-                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом барабашкина">
-                                        Улица пушкина дом барабашкина
+                                    <li class="delivery-address__city__item" data-city="Киров">
+                                        Киров
                                     </li>
-                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом барабаса">
-                                        Улица пушкина дом барабаса
+                                    <li class="delivery-address__city__item" data-city="Питер">
+                                        Питер
                                     </li>
-                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом коого">
-                                        Улица пушкина дом коого
+                                    <li class="delivery-address__city__item" data-city="Магадан">
+                                        Магадан
                                     </li>
-                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом парапам">
-                                        Улица пушкина дом парапам
+                                    <li class="delivery-address__city__item" data-city="Сверловск">
+                                        Сверловск
                                     </li>
-                                    <li class="delivery-address__city__item" data-city="Улица пушкина дом папа">
-                                        Улица пушкина дом папа
+                                    <li class="delivery-address__city__item" data-city="Край">
+                                        Край
                                     </li>
-                                    <li class="delivery-address__city__item" data-city="нижний">
-                                        нижний
+                                    <li class="delivery-address__city__item" data-city="Приморск">
+                                        Приморск
                                     </li>
                                 </ul>                                
                             </div>
@@ -246,7 +247,7 @@
                         </div>
                         <div class="delivery-address__house-wrap">
                             <div class="delivery-address__house-street">
-                                <input type="text" placeholder="Улица">
+                                <input type="text" class="delivery-address__house-input-street" placeholder="Улица">
                             </div>
                             <div class="delivery-address__house-box">
                                 <input class="delivery-address__house-input delivery-address__house-number" type="text" placeholder="Дом">
@@ -256,7 +257,7 @@
                         <div class="unknown-location">
                             <input type="checkbox" class='visually-hidden unknown-location' id="unknown-location">
                             <label for="unknown-location">
-                                Не знаю где буду
+                                <span class="unknown-location-span">Не знаю где буду</span>    
                                 <p>Магазин вам позвонит и уточнит</p>
                             </label>
                         </div>                        
@@ -379,6 +380,11 @@
         <div class="shadow-mode"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/mask.js"></script>
+        <script>
+            $('[type=tel]').mask('+7 (999) 999-99-99')
+        </script>
         <script>
             let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
             buttonOpenNavDesctopBasket.addEventListener('click', function(evt) {
@@ -413,6 +419,7 @@
                     let target = event.target;
                     let plet = target.dataset.city
                     document.querySelector('.delivery-address__city-name').innerHTML = plet
+                    document.getElementById('city-input').value = plet   
                 })
             }
 
@@ -434,6 +441,41 @@
                     document.querySelector('.when-deliver__data-name').innerHTML = plets
                 })
             }
+
+        //ПЕРЕКЛЮЧЕНИЕ МОЖДУ ДОСТАВКАМИ
+        //кнопка подарю я
+        let giveYou = document.querySelector('.place-order__who-deliver__box__description')
+        giveYou.addEventListener('click', function() {
+            document.querySelector('.recipient').style = 'display: none'
+            document.querySelector('.note').style = 'display: none'
+            document.querySelector('.recipient__input-name').disabled = true;
+            document.querySelector('.recipient__input-tel').disabled = true;
+            document.querySelector('.note__textarea').disabled = true;
+            document.querySelector('.delivery-address__there-address').style = 'display: block'
+            document.querySelector('.unknown-location-span').innerHTML = 'Не знаю где буду'
+        })
+
+        //кнопка подарит курьер 
+        let giveCurier = document.querySelector('.place-order__who-deliver__box__description-curier')
+        giveCurier.addEventListener('click', function() {
+            document.querySelector('.recipient').style = 'display: block'
+            document.querySelector('.note').style = 'display: block'
+            document.querySelector('.delivery-address__there-address').style = 'display: none'
+            document.querySelector('.recipient__input-name').disabled = false;
+            document.querySelector('.recipient__input-tel').disabled = false;
+            document.querySelector('.note__textarea').disabled = false;
+            document.querySelector('.unknown-location-span').innerHTML = 'Не знаю где будет получатель'
+        })
+
+        //кнпока дизайбел адрес доставки
+        let disabledAdress = document.querySelector('.unknown-location') 
+        disabledAdress.addEventListener('change', function() {
+            document.querySelector('.delivery-address__city').classList.toggle('delivery-address__city-active')
+            document.querySelector('.delivery-address__city-text').classList.toggle('delivery-address__city-text-active')
+            document.querySelector('.delivery-address__house-number').classList.toggle('delivery-address__house-number-active')
+            document.querySelector('.delivery-address__house-flat').classList.toggle('delivery-address__house-flat-active')
+            document.querySelector('.delivery-address__house-input-street').classList.toggle('delivery-address__house-input-street-active')
+        })
         </script>
     </body>
 </html>

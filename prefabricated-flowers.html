@@ -724,6 +724,11 @@
         <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/mask.js"></script>
+        <script>
+            $('[type=tel]').mask('+7 (999) 999-99-99')
+        </script>
         <script src="js/script.js"></script>
         <script>
             //ВЫСЛЫВАШКА ДЛЯ СОРТИРОВКИ
@@ -867,12 +872,12 @@
         var inputs = [input0, input1];
 
         noUiSlider.create(keypressSlider, {
-        start: [20, 80],
+            start: [800, 2900],
         connect: true,
         step: 1,
         range: {
-            min: [1],
-            max: [250]
+            min: [0],
+            max: [5000]
         }
         });
 
@@ -880,7 +885,7 @@
 
         /* конечные Входы  */
         keypressSlider.noUiSlider.on("update", function(values, handle) {
-        inputs[handle].value = values[handle];
+            inputs[handle].value = Math.ceil(values[handle]) + ' ₽';
 
         /* начните прослушивать нажатие клавиши на входе */
         function setSliderHandle(i, value) {
