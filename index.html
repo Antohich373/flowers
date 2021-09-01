@@ -38,7 +38,24 @@
                             </div> -->
                             <div class="header__desctop-nav__info__city">
                                 <p>Ваш город</p>
-                                <button type="button">Киров</span>
+                                <button class="header__desctop-nav__info__city__button" type="button">Киров</button>
+                                <ul class="city-network__city-list">
+                                    <li class="city-network__city-item" data-networkcity="Выборг">
+                                        Выборг
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Санкт-Петербург">
+                                        Санкт-Петербург
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Нижний Новгород">
+                                        Нижний Новгород
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Кирово-Чепецк">
+                                        Кирово-Чепецк
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Киров">
+                                        Киров
+                                    </li>
+                                </ul> 
                             </div>
                         </div>
 
@@ -111,7 +128,8 @@
                         <li class="header__mobile-nav__main__item header__mobile-nav__main__item__city">
                             <div class="city-network">
                                 <span>Ваш город</span>
-                                <button class="button-city-open" type="button">Киров</button>                                
+                                <button class="button-city-open" type="button">Киров</button>        
+                       
                             </div>
                             <!-- <div class="city-not-network">
                                 <span>Наш адрес</span>
@@ -472,7 +490,12 @@
                                     <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
                                     <div class="catalog__item__price-container">
                                         <span class="catalog__item__price">890 ₽</span>
-                                        <button class="catalog__item__basket" type="button"></button>
+                                        <!-- <button class="catalog__item__basket" type="button"></button> -->
+                                        <div class="catalog__item__basket-plus">
+                                            <button class="catalog__item__basket-plus__minus" type="button">-</button>
+                                            <p class="catalog__item__basket-plus__number">1</p>
+                                            <button class="catalog__item__basket-plus__plus" type="button">+</button>
+                                        </div>
                                     </div>                                
                                 </div>
                             </li>
@@ -1007,6 +1030,7 @@
             </ul>
             <button class="basket-mobile__button" type="button">Оформить заказ</button>
         </div>
+
         <div class="modal-wrap">
             <div class="log-account">
                 <h2 class="log-account__header">Вход</h2>
@@ -1279,8 +1303,8 @@
             });
             
             document.querySelector('.delivery-slide__district__value').addEventListener('click', function() {
-                document.querySelector('.delivery-slide__district__list').classList.add('delivery-slide__district__list-active')
-                document.querySelector('.delivery-slide__district').classList.add('delivery-slide__district-active')
+                document.querySelector('.delivery-slide__district__list').classList.toggle('delivery-slide__district__list-active')
+                document.querySelector('.delivery-slide__district').classList.toggle('delivery-slide__district-active')
             })
 
             let ItemDiliviry = document.querySelectorAll('.delivery-slide__district__item')
@@ -1373,37 +1397,37 @@
             var inputs = [input0, input1];
 
             noUiSlider.create(keypressSlider, {
-            start: [800, 2900],
+            start: [0, 800],
             connect: true,
             step: 1,
             range: {
-                min: [0],
-                max: [5000]
+                min: [1],
+                max: [10000]
             }
             });
 
-            /* начать Ввод  */
+            /* begin Inputs  */
 
-            /* конечные Входы  */
+            /* end Inputs  */
             keypressSlider.noUiSlider.on("update", function(values, handle) {
-            inputs[handle].value = Math.ceil(values[handle]) + ' ₽';
+            inputs[handle].value =  Math.ceil(values[handle]);
 
-            /* начните прослушивать нажатие клавиши на входе */
+            /* begin Listen to keypress on the input */
             function setSliderHandle(i, value) {
                 var r = [null, null];
                 r[i] = value;
                 keypressSlider.noUiSlider.set(r);
             }
 
-            // Прослушивайте события нажатия клавиш в поле ввода.
+            // Listen to keydown events on the input field.
             inputs.forEach(function(input, handle) {
                 input.addEventListener("change", function() {
                 setSliderHandle(handle, this.value);
                 });
 
                 input.addEventListener("keydown", function(e) {
-                var values = Math.floor(keypressSlider.noUiSlider.get());
-                var value =  Math.floor(Number(values[handle]));
+                var values = keypressSlider.noUiSlider.get();
+                var value = Number(values[handle]);
 
                 // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
                 var steps = keypressSlider.noUiSlider.steps();
@@ -1413,24 +1437,24 @@
 
                 var position;
 
-                // 13 - это ввод,
-                // 38 - это ключевой момент,
-                // 40 - это ключ вниз.
+                // 13 is enter,
+                // 38 is key up,
+                // 40 is key down.
                 switch (e.which) {
                     case 13:
                     setSliderHandle(handle, this.value);
                     break;
 
                     case 38:
-                    // Сделайте шаг вперед, увеличьте значение ползунка (вверх)
+                    // Get step to go increase slider value (up)
                     position = step[1];
 
-                    // false = ни один шаг не установлен
+                    // false = no step is set
                     if (position === false) {
                         position = 1;
                     }
 
-                    // null = край ползунка
+                    // null = edge of slider
                     if (position !== null) {
                         setSliderHandle(handle, value + position);
                     }
@@ -1452,9 +1476,23 @@
                 }
                 });
             });
-            /* завершение прослушивания нажатия клавиши на входе */
+            /* end Listen to keypress on the input */
             });
+            //ОТКРЫТИЕ ВЫБОР ГОРОДА 
+            let openCityItem = document.querySelector('.header__desctop-nav__info__city__button')
+            openCityItem.addEventListener('click', function() {
+                document.querySelector('.city-network__city-list').classList.toggle('city-network__city-list-active')
+            })
             
+            let itemCity = document.querySelectorAll('.city-network__city-item')
+            for(let i = 0; i < itemCity.length; i++) {
+                itemCity[i].addEventListener('click', function() {
+                    let target = event.target;
+                    let plet = target.dataset.networkcity
+                    document.querySelector('.header__desctop-nav__info__city__button').innerHTML = plet
+                    document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
+                })
+            }
             
         </script>
     </body>

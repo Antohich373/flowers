@@ -288,7 +288,8 @@
                     <div class="when-deliver__box">
                         <div class="when-deliver__data">
                             <div class="when-deliver__data-name">31 августа, завтра</div> 
-                            <p>Дата</p>
+                            <p class="when-deliver__data__text">Дата</p>
+                            <input class="visually-hidden when-deliver__data-input" id="when-deliver__data-input" type="text" name="data">
                             <div class="when-deliver__data__list-wrap">
                                 <ul class="when-deliver__data__list">
                                     <li class="when-deliver__data__item" data-date="32 августа, завтра">
@@ -318,7 +319,7 @@
                         <input class="when-deliver__input-time" type="text" name="time" id="" placeholder="Время">   
                     </div>
                     <div class="when-deliver__quickly">
-                        <input type="checkbox" class="visually-hidden" name="" id="when-deliver__quickly-cheked">
+                        <input type="checkbox" class="when-deliver__quickly-input visually-hidden" name="" id="when-deliver__quickly-cheked">
                         <label for="when-deliver__quickly-cheked">
                             Как можно быстрее
                             <p>Сегодня, к 18:15</p>
@@ -351,6 +352,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- ИТОГ -->
                 <div class="result">
                     <ul class="result__list">
@@ -383,99 +385,145 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="js/mask.js"></script>
         <script>
-            $('[type=tel]').mask('+7 (999) 999-99-99')
+            $('[type=tel]').mask('+7 (999) 999-99-99');
         </script>
         <script>
             let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
             buttonOpenNavDesctopBasket.addEventListener('click', function(evt) {
                 evt.preventDefault();
-                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
-                document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action');
+                document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket');
             })  
 
-            const ta = document.querySelector('.note__textarea') // textarea
-            const counter = document.querySelector('.note__curent-textarea') // счётчик
-
-
+            //СЧЕТЧИК СИМВОЛОВ ЗАПИСКИ
+            const ta = document.querySelector('.note__textarea'); // textarea
+            const counter = document.querySelector('.note__curent-textarea');// счётчик
             let onInput = function(evt) {
-                const length = evt.target.value.length
-                counter.textContent = 250 - length
+                const length = evt.target.value.length;
+                counter.textContent = 250 - length;
             }
-            ta.addEventListener('input', onInput)
+            ta.addEventListener('input', onInput);
 
             /*ВЫБОР ГОРОДА*/
             /*блок города*/
-            let choosingСity = document.querySelector('.delivery-address__city')
+            let choosingСity = document.querySelector('.delivery-address__city');
             /*блок со списком городов*/
-            let choosingСityPopup = document.querySelector('.delivery-address__city__list-wrap')
+            let choosingСityPopup = document.querySelector('.delivery-address__city__list-wrap');
             /*список городов*/
-            let choosingСityItem = document.querySelectorAll('.delivery-address__city__item')
+            let choosingСityItem = document.querySelectorAll('.delivery-address__city__item');
             
             choosingСity.addEventListener('click', function() {
-                choosingСityPopup.classList.toggle('delivery-address__city__list-wrap-active')
+                choosingСityPopup.classList.toggle('delivery-address__city__list-wrap-active');
             })
             for(let i = 0; i < choosingСityItem.length; i++) {
                 choosingСityItem[i].addEventListener('click', function() {
                     let target = event.target;
-                    let plet = target.dataset.city
-                    document.querySelector('.delivery-address__city-name').innerHTML = plet
-                    document.getElementById('city-input').value = plet   
+                    let plet = target.dataset.city;
+                    document.querySelector('.delivery-address__city-name').innerHTML = plet;
+                    document.getElementById('city-input').value = plet;
                 })
             }
-
             /*ВЫБОР ДАТЫ*/
             /*блок даты*/
-            let choosingDate = document.querySelector('.when-deliver__data')
+            let choosingDate = document.querySelector('.when-deliver__data');
             /*блок со списком дат*/
-            let choosingDatePopup = document.querySelector('.when-deliver__data__list-wrap')
+            let choosingDatePopup = document.querySelector('.when-deliver__data__list-wrap');
             /*список дат*/
-            let choosingDateItem = document.querySelectorAll('.when-deliver__data__item')
-            
+            let choosingDateItem = document.querySelectorAll('.when-deliver__data__item');
             choosingDate.addEventListener('click', function() {
-                choosingDatePopup.classList.toggle('when-deliver__data__list-wrap-active')
+                choosingDatePopup.classList.toggle('when-deliver__data__list-wrap-active');
             })
             for(let i = 0; i < choosingDateItem.length; i++) {
                 choosingDateItem[i].addEventListener('click', function() {
                     let target = event.target;
-                    let plets = target.dataset.date
-                    document.querySelector('.when-deliver__data-name').innerHTML = plets
+                    let plets = target.dataset.date;
+                    document.querySelector('.when-deliver__data-name').innerHTML = plets;
+                    document.getElementById('when-deliver__data-input').value = plets;
                 })
             }
-
         //ПЕРЕКЛЮЧЕНИЕ МОЖДУ ДОСТАВКАМИ
         //кнопка подарю я
         let giveYou = document.querySelector('.place-order__who-deliver__box__description')
         giveYou.addEventListener('click', function() {
-            document.querySelector('.recipient').style = 'display: none'
-            document.querySelector('.note').style = 'display: none'
+            document.querySelector('.recipient').style = 'display: none';
+            document.querySelector('.note').style = 'display: none';
             document.querySelector('.recipient__input-name').disabled = true;
             document.querySelector('.recipient__input-tel').disabled = true;
             document.querySelector('.note__textarea').disabled = true;
-            document.querySelector('.delivery-address__there-address').style = 'display: block'
-            document.querySelector('.unknown-location-span').innerHTML = 'Не знаю где буду'
+            document.querySelector('.delivery-address__there-address').style = 'display: block';
+            document.querySelector('.unknown-location-span').innerHTML = 'Не знаю где буду';
         })
 
         //кнопка подарит курьер 
         let giveCurier = document.querySelector('.place-order__who-deliver__box__description-curier')
         giveCurier.addEventListener('click', function() {
-            document.querySelector('.recipient').style = 'display: block'
-            document.querySelector('.note').style = 'display: block'
-            document.querySelector('.delivery-address__there-address').style = 'display: none'
+            document.querySelector('.recipient').style = 'display: block';
+            document.querySelector('.note').style = 'display: block';
+            document.querySelector('.delivery-address__there-address').style = 'display: none';
             document.querySelector('.recipient__input-name').disabled = false;
             document.querySelector('.recipient__input-tel').disabled = false;
             document.querySelector('.note__textarea').disabled = false;
-            document.querySelector('.unknown-location-span').innerHTML = 'Не знаю где будет получатель'
+            document.querySelector('.unknown-location-span').innerHTML = 'Не знаю где будет получатель';
         })
+
+        //БЛОКИРОВКА ИНПУТА ПОЛУЧАТЕЛЯ И ЗАПИСКИ
+        let giveCourier = document.getElementById('give-courier');
+        giveCourier.onchange = function () { // Отслеживаем изменение чекбокса
+            if (giveCourier.checked == false){ // Если элемент не выбран, то
+                document.c('recipient__input recipient__input-name').disabled = false
+                document.querySelector('recipient__input recipient__input-tel').disabled = false
+                document.querySelector('note__textarea').disabled = false
+            } else {
+                document.querySelector('recipient__input recipient__input-name').disabled = true
+                document.querySelector('recipient__input recipient__input-tel').disabled = true
+                document.querySelector('note__textarea').disabled = true
+            }
+        }
 
         //кнпока дизайбел адрес доставки
         let disabledAdress = document.querySelector('.unknown-location') 
         disabledAdress.addEventListener('change', function() {
-            document.querySelector('.delivery-address__city').classList.toggle('delivery-address__city-active')
-            document.querySelector('.delivery-address__city-text').classList.toggle('delivery-address__city-text-active')
-            document.querySelector('.delivery-address__house-number').classList.toggle('delivery-address__house-number-active')
-            document.querySelector('.delivery-address__house-flat').classList.toggle('delivery-address__house-flat-active')
-            document.querySelector('.delivery-address__house-input-street').classList.toggle('delivery-address__house-input-street-active')
+            document.querySelector('.delivery-address__city').classList.toggle('delivery-address__city-active');
+            document.querySelector('.delivery-address__city-text').classList.toggle('delivery-address__city-text-active');
+            document.querySelector('.delivery-address__house-number').classList.toggle('delivery-address__house-number-active');
+            document.querySelector('.delivery-address__house-flat').classList.toggle('delivery-address__house-flat-active');
+            document.querySelector('.delivery-address__house-input-street').classList.toggle('delivery-address__house-input-street-active');
         })
+
+        //ДИЗЭЙБЕЛ ИНПУТОВ АДРЕСА ДОСТАВКИ
+        let inknovInput =  document.getElementById('unknown-location');
+        inknovInput.onchange = function () { // Отслеживаем изменение чекбокса
+            if (inknovInput.checked == false){ // Если элемент не выбран, то
+                document.querySelector('.delivery-address__house-number').disabled = false
+                document.querySelector('.delivery-address__house-flat').disabled = false
+                document.querySelector('.delivery-address__house-input-street').disabled = false
+                document.querySelector('.delivery-address__city-input').disabled = false
+            } else {
+                document.querySelector('.delivery-address__house-number').disabled = true
+                document.querySelector('.delivery-address__house-flat').disabled = true
+                document.querySelector('.delivery-address__house-input-street').disabled = true
+                document.querySelector('.delivery-address__city-input').disabled = true
+            }
+        }
+
+        //КОГДА ДОСТАВИТЬ ПРИ НАЖАТИИ КАК МОЖНО БЫСТРЕЕ
+        let whenInput = document.querySelector('.when-deliver__quickly-input')
+        whenInput.addEventListener('change', function() {
+            document.querySelector('.when-deliver__input-time').classList.toggle('when-deliver__input-time-active');
+            document.querySelector('.when-deliver__data').classList.toggle('when-deliver__data-active');
+            document.querySelector('.when-deliver__data__text').classList.toggle('when-deliver__data__text-active');
+        })
+
+        let whenInputChekbox = document.getElementById('when-deliver__quickly-cheked');
+        whenInputChekbox.onchange = function () { // Отслеживаем изменение чекбокса
+            if (whenInputChekbox.checked == false){ // Если элемент не выбран, то
+                document.querySelector('.when-deliver__input-time').disabled = false
+                document.getElementById('when-deliver__data-input').disabled = false
+            } else {
+                document.querySelector('.when-deliver__input-time').disabled = true
+                document.getElementById('when-deliver__data-input').disabled = true
+            }
+        }
         </script>
     </body>
 </html>

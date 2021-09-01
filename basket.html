@@ -188,7 +188,7 @@
                             <span class="basket__item__block-button-mobile"><button class="basket__item__block-button-minus" type="button">-</button><span class="basket__item__block-button-number">1</span><button class="basket__item__block-button-plus" type="button">+</button></span>
                         </div>
                         <div class="basket__item__block-price">
-                            <span class="basket__item__block-price__bytton-desctop"><button class="basket__item__block-price__bytton-desctop__minus" type="button">-</button><span class="basket__item__block-price__bytton-desctop__number">1</span><button class="basket__item__block-price__bytton-desctop__plus" type="button">+</button></span>
+                            <span class="basket__item__block-price__bytton-desctop"><button class="basket__item__block-price__bytton-desctop__minus" type="button"><span>-</span></button><span class="basket__item__block-price__bytton-desctop__number">1</span><button class="basket__item__block-price__bytton-desctop__plus" type="button"><span>+</span></button></span>
                             <div>
                                 <span class="basket__item__block-price__basket"></span>
                                 <p class="basket__item__price">2 390 ₽</p>
@@ -595,7 +595,6 @@
                 document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')            
             })
 
-
             //ОТКРЫТИЕ ЗАПИСКИ В ОТКРЫТКАХ НА МОБИЛЬНОЙ ВЕРСИИ
             let openTextarea = document.querySelector('.gift-window__form__button-box__textarea');
             openTextarea.addEventListener('click', function() {
@@ -694,27 +693,22 @@
                         slidesPerView: 2,
                         spaceBetween: 55,
                     },
-
                     450: {
                         slidesPerView: 3,
                         spaceBetween: 105,
                     },
-
                     600: {
                         slidesPerView: 4,
                         spaceBetween: 105,
                     },
-
                     736: {
                         slidesPerView: 3,
                         spaceBetween: 105,
                     },
-
                     800: {
                         slidesPerView: 4,
                         spaceBetween: 225,
                     },
-
                     1250: {
                         slidesPerView: 4,
                         spaceBetween: 05,
@@ -735,37 +729,34 @@
             }
 
             var rangeSlider = document.querySelector(".slider-range");
-
             noUiSlider.create(rangeSlider, {
-            start: [50],
-            connect: [true, false],
-            step: 0,
-            range: {
-                min: [0],
-                max: [56]
-            }
+                start: [50],
+                connect: [true, false],
+                step: 0,
+                range: {
+                    min: [0],
+                    max: [56]
+                }
             });
-
-            /* begin Value  */
-            var rangeSliderValueElement = document.querySelector(".slider-range-value");
-            rangeSlider.noUiSlider.on("update", function(values, handle) {
-            rangeSliderValueElement.innerHTML = Math.floor(values[handle]);
+                var rangeSliderValueElement = document.querySelector(".slider-range-value");
+                rangeSlider.noUiSlider.on("update", function(values, handle) {
+                rangeSliderValueElement.innerHTML = Math.floor(values[handle]);
             });
             var handle = rangeSlider.querySelector(".noUi-handle");
             handle.setAttribute("tabindex", 0);
             handle.addEventListener("click", function() {
-            this.focus();
+                this.focus();
             });
             handle.addEventListener("keydown", function(event) {
-            var value = Number(rangeSlider.noUiSlider.get());
-            switch (event.which) {
-                case 37:
-                rangeSlider.noUiSlider.set(value - 1);
-                break;
-                case 39:
-                rangeSlider.noUiSlider.set(value + 1);
-                break;
-            }
+                var value = Number(rangeSlider.noUiSlider.get());
+                switch (event.which) {
+                    case 37:
+                        rangeSlider.noUiSlider.set(value - 1);
+                    break;
+                    case 39:
+                        rangeSlider.noUiSlider.set(value + 1);
+                    break;
+                }
             });
         </script>
     </body>

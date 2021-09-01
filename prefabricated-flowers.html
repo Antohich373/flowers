@@ -16,7 +16,7 @@
         <header class="header">
             <div class="header__mobile wrap">
                 <div class="header__mobile__nav">
-                    <a href="index.html" class="header__mobile__nav__logo">
+                    <a href="#" class="header__mobile__nav__logo">
                         <picture>
                             <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
                             <img src="image/header/logo-mobile.png" width="31" height="31"> 
@@ -32,14 +32,31 @@
                                 <p class="header__desctop-nav__info__bell__name">Звонок бесплатный</p>
                                 <span class="header__desctop-nav__info__tel"><a href='tel:8 800 654 67 67'>8 800 654 67 67</a></span>
                             </div>
-                            <div class="header__desctop-nav__info__adress">
+                            <!-- <div class="header__desctop-nav__info__adress">
                                 <p>Наш адрес</p>
                                 <span>г.Киров, ул. Ленина, 102А</span>
-                            </div>
-                            <!-- <div class="header__desctop-nav__info__city">
-                                <p>Ваш город</p>
-                                <button type="button">Киров</span>
                             </div> -->
+                            <div class="header__desctop-nav__info__city">
+                                <p>Ваш город</p>
+                                <button class="header__desctop-nav__info__city__button" type="button">Киров</button>
+                                <ul class="city-network__city-list">
+                                    <li class="city-network__city-item" data-networkcity="Выборг">
+                                        Выборг
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Санкт-Петербург">
+                                        Санкт-Петербург
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Нижний Новгород">
+                                        Нижний Новгород
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Кирово-Чепецк">
+                                        Кирово-Чепецк
+                                    </li>
+                                    <li class="city-network__city-item" data-networkcity="Киров">
+                                        Киров
+                                    </li>
+                                </ul> 
+                            </div>
                         </div>
 
                         <div class="header__desctop-nav__user">
@@ -76,7 +93,7 @@
                                         </div>                                        
                                     </div>
                                 </li>
-                                <li class="header__desctop-nav__user__item"><a href="#">Войти</a></li>
+                                <li class="header__desctop-nav__user__item header__desctop-nav__user__item-enter"><a href="#">Войти</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,7 +106,7 @@
                     <ul class="navigation-after-header__list">
                         <li class="navigation-after-header__item"><a href="#">Цветы</a></li>
                         <li class="navigation-after-header__item"><a href="#">Букеты из роз</a></li>
-                        <li class="navigation-after-header__item"><a href="#">Сборные букеты</a></li>
+                        <li class="navigation-after-header__item"><a href="prefabricated-flowers.html">Сборные букеты</a></li>
                         <li class="navigation-after-header__item"><a href="#">Композиции</a></li>
                         <li class="navigation-after-header__item"><a href="#">На праздник</a></li>
                         <li class="navigation-after-header__item"><a href="#">Подарки</a></li>
@@ -111,12 +128,13 @@
                         <li class="header__mobile-nav__main__item header__mobile-nav__main__item__city">
                             <div class="city-network">
                                 <span>Ваш город</span>
-                                <button class="button-city-open" type="button">Киров</button>                                
+                                <button class="button-city-open" type="button">Киров</button>        
+                       
                             </div>
-                            <div class="city-not-network">
+                            <!-- <div class="city-not-network">
                                 <span>Наш адрес</span>
                                 <p>г.Киров, ул. Ленина, 102А</p>                                
-                            </div>
+                            </div> -->
                         </li>
                         <li class="header__mobile-nav__main__item header__mobile-nav__main__item__bonus">
                             <span>Роман</span>
@@ -163,7 +181,7 @@
                     <h2 class="header__mobile-nav__popular__header">Популярное</h2>
                     <ul class="header__mobile-nav__popular__list">
                         <li class="header__mobile-nav__popular__list__item"><a href="#">Букеты из роз</a></li>
-                        <li class="header__mobile-nav__popular__list__item"><a href="#">Сборные букеты</a></li>
+                        <li class="header__mobile-nav__popular__list__item"><a href="prefabricated-flowers.html">Сборные букеты</a></li>
                         <li class="header__mobile-nav__popular__list__item"><a href="#">Композиции</a></li>
                         <li class="header__mobile-nav__popular__list__item"><a href="#">Штучные цветы</a></li>
                         <li class="header__mobile-nav__popular__list__item"><a href="#">Свадебная флористика</a></li>
@@ -219,7 +237,7 @@
                             <h2 class="header__desctop-navigation__container__header">Покупателям</h2>
                             <ul class="header__desctop-navigation__container__list header__desctop-navigation__container__pocup">
                                 <li class="header__desctop-navigation__container__item"><a href="#">Букеты из роз</a></li>
-                                <li class="header__desctop-navigation__container__item"><a href="#">Сборные букеты</a></li>
+                                <li class="header__desctop-navigation__container__item"><a href="prefabricated-flowers.html">Сборные букеты</a></li>
                                 <li class="header__desctop-navigation__container__item"><a href="#">Композиции</a></li>
                                 <li class="header__desctop-navigation__container__item"><a href="#">Штучные цветы</a></li>
                                 <li class="header__desctop-navigation__container__item"><a href="#">Свадебная флористика</a></li>
@@ -719,6 +737,93 @@
                 </ul>
             </div>
         </footer>
+        <div class="modal-wrap">
+            <div class="log-account">
+                <h2 class="log-account__header">Вход</h2>
+                <p class="log-account__text">Войдите через соцсети или <br> используйте номер телефона</p>
+                <ul class="log-account__list">
+                    <li class="log-account__item log-account__item-google">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-vk">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-onoklass">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-twitter">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-facebok">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+                <form class="log-account__form" method="POST">
+                    <input class="log-account__form__input log-account__form__input-tel" type="tel" name="tel" placeholder="Телефон">
+                    <div class="log-account__form-password">
+                        <input class="log-account__form__input log-account__form__input-password" type="password" id="password-input" placeholder="Пароль">
+                        <a href="#" class="log-account__form__link"></a>
+                    </div>    
+                    <a class="log-account__form__recover" href=""> Забыли пароль?</a>            
+                    <button class="log-account__form__submit" type="submit"> Войти </button>
+                </form>
+                <button class="log-account__button" type="button">Зарегистрироваться</button>
+                <div class="log-account__close"></div>
+            </div>            
+        </div>
+
+        <!-- ОКНО РЕГИСТРАЦИИ -->
+        <div class="registration__wrap">
+            <div class="registration">
+                <h2 class="registration__header">Регистрация</h2>
+                <p class="registration__text">Зарегистрируйтесь через соцсети <br> или используйте номер телефона</p>
+                <ul class="log-account__list">
+                    <li class="log-account__item log-account__item-google">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-vk">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-onoklass">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-twitter">
+                        <a href="#"></a>
+                    </li>
+                    <li class="log-account__item log-account__item-facebok">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+                <form class="registration__form" method="POST">
+                    <input class="registration__input" type="tel" name="tel" placeholder="Телефон">
+                    <button class="registration__submit" type="submit">Выслать код подтверждения</button>
+                </form>
+                <div class="registration__close">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ОКНО ВВОДА КОД СМС -->
+        <div class="registration-code__wrap ">
+            <div class="registration-code">
+                <h2 class="registration-code__header">Регистрация</h2>
+                <p class="registration-code__text">Мы выслали код <br> на номер <span>8 912 438 48 78</span> </p>
+                <form class="registration-code__form" method="POST">
+                    <div class="registration-code__form__wrap">
+                        <input class="registration-code__input" type="tel" name="tel" placeholder="Код из СМС">
+                        <p class="registration-code__content">
+                            Повторить
+                            <span>23 сек</span>
+                        </p>
+                    </div>
+                    <button class="registration-code__submit" type="submit">Зарегистрироваться</button>
+                </form>
+                <div class="registration-code__close">
+
+                </div>
+            </div>
+        </div>
         <!-- <div class="shadow-desctop"></div> -->
         <div class="shadow-mode"></div>
         <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
@@ -731,6 +836,45 @@
         </script>
         <script src="js/script.js"></script>
         <script>
+            //ОТКРЫТИЕ ЗАКРЫТИЕ ОКНА ВХОДА В АККАУНТ
+            let buttonOpenRegister = document.querySelector('.header__desctop-nav__user__item-enter')
+            buttonOpenRegister.addEventListener('click', function() {
+                document.querySelector('.modal-wrap').classList.add('log-account-active')
+                document.querySelector('.shadow-mode').classList.add('shadow-mode-active')
+                bodys.classList.add('body-active')
+            })
+            let buttonCloseRegister = document.querySelector('.log-account__close')
+            buttonCloseRegister.addEventListener('click', function() {
+                document.querySelector('.modal-wrap').classList.remove('log-account-active')
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
+                bodys.classList.remove('body-active')
+            })
+
+            //ОКНО РЕГИСТРАЦИИ
+            let OpenRegistr = document.querySelector('.log-account__button')
+            OpenRegistr.addEventListener('click', function() {
+                setTimeout(function () {
+                    document.querySelector('.registration__wrap').classList.add('registration__wrap-active')               
+                }, 300)
+                document.querySelector('.modal-wrap').classList.remove('log-account-active')
+            })
+
+            //ЗАКРЫТИЯ ОКНА РЕГИСТРАЦИИ
+            let closeRegistr = document.querySelector('.registration__close')
+            closeRegistr.addEventListener('click', function() {
+                document.querySelector('.registration__wrap').classList.remove('registration__wrap-active')     
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')         
+                bodys.classList.remove('body-active')
+            })
+
+            //ЗАКРЫТИЕ ОКНА С ВВОДОМ КОДА ИЗ СМС
+            let closeRegisterCode = document.querySelector('.registration-code__close')
+            closeRegisterCode.addEventListener('click', function() {
+                document.querySelector('.registration-code__wrap').classList.remove('registration-code__wrap-active')
+                document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')    
+                bodys.classList.remove('body-active')
+            })
+
             //ВЫСЛЫВАШКА ДЛЯ СОРТИРОВКИ
             let buttonOpenSort = document.querySelector('.catalog__sort__button')
 
@@ -859,101 +1003,114 @@
             });
 
             let buttonRecomend = document.querySelectorAll('.recommended__item__button');
-            console.log(buttonRecomend)
             for(let i = 0; i < buttonRecomend.length; i++) {
                 buttonRecomend[i].addEventListener('click', function() {
                     buttonRecomend[i].classList.toggle('recommended__item__button-active')
                 })
             }
 
-        var keypressSlider = document.querySelector(".slider-keypress");
-        var input0 = document.querySelector(".input-with-keypress-0");
-        var input1 = document.querySelector(".input-with-keypress-1");
-        var inputs = [input0, input1];
+            var keypressSlider = document.querySelector(".slider-keypress");
+            var input0 = document.querySelector(".input-with-keypress-0");
+            var input1 = document.querySelector(".input-with-keypress-1");
+            var inputs = [input0, input1];
 
-        noUiSlider.create(keypressSlider, {
-            start: [800, 2900],
-        connect: true,
-        step: 1,
-        range: {
-            min: [0],
-            max: [5000]
-        }
-        });
-
-        /* начать Ввод  */
-
-        /* конечные Входы  */
-        keypressSlider.noUiSlider.on("update", function(values, handle) {
-            inputs[handle].value = Math.ceil(values[handle]) + ' ₽';
-
-        /* начните прослушивать нажатие клавиши на входе */
-        function setSliderHandle(i, value) {
-            var r = [null, null];
-            r[i] = value;
-            keypressSlider.noUiSlider.set(r);
-        }
-
-        // Прослушивайте события нажатия клавиш в поле ввода.
-        inputs.forEach(function(input, handle) {
-            input.addEventListener("change", function() {
-            setSliderHandle(handle, this.value);
-            });
-
-            input.addEventListener("keydown", function(e) {
-            var values = keypressSlider.noUiSlider.get();
-            var value = Number(values[handle]);
-
-            // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
-            var steps = keypressSlider.noUiSlider.steps();
-
-            // [down, up]
-            var step = steps[handle];
-
-            var position;
-
-            // 13 - это ввод,
-            // 38 - это ключевой момент,
-            // 40 - это ключ вниз.
-            switch (e.which) {
-                case 13:
-                setSliderHandle(handle, this.value);
-                break;
-
-                case 38:
-                // Сделайте шаг вперед, увеличьте значение ползунка (вверх)
-                position = step[1];
-
-                // false = ни один шаг не установлен
-                if (position === false) {
-                    position = 1;
-                }
-
-                // null = край ползунка
-                if (position !== null) {
-                    setSliderHandle(handle, value + position);
-                }
-
-                break;
-
-                case 40:
-                position = step[0];
-
-                if (position === false) {
-                    position = 1;
-                }
-
-                if (position !== null) {
-                    setSliderHandle(handle, value - position);
-                }
-
-                break;
+            noUiSlider.create(keypressSlider, {
+            start: [0, 800],
+            connect: true,
+            step: 1,
+            range: {
+                min: [1],
+                max: [10000]
             }
             });
-        });
-        /* завершение прослушивания нажатия клавиши на входе */
-        });
 
+            /* begin Inputs  */
+
+            /* end Inputs  */
+            keypressSlider.noUiSlider.on("update", function(values, handle) {
+            inputs[handle].value =  Math.ceil(values[handle]);
+
+            /* begin Listen to keypress on the input */
+            function setSliderHandle(i, value) {
+                var r = [null, null];
+                r[i] = value;
+                keypressSlider.noUiSlider.set(r);
+            }
+
+            // Listen to keydown events on the input field.
+            inputs.forEach(function(input, handle) {
+                input.addEventListener("change", function() {
+                setSliderHandle(handle, this.value);
+                });
+
+                input.addEventListener("keydown", function(e) {
+                var values = keypressSlider.noUiSlider.get();
+                var value = Number(values[handle]);
+
+                // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+                var steps = keypressSlider.noUiSlider.steps();
+
+                // [down, up]
+                var step = steps[handle];
+
+                var position;
+
+                // 13 is enter,
+                // 38 is key up,
+                // 40 is key down.
+                switch (e.which) {
+                    case 13:
+                    setSliderHandle(handle, this.value);
+                    break;
+
+                    case 38:
+                    // Get step to go increase slider value (up)
+                    position = step[1];
+
+                    // false = no step is set
+                    if (position === false) {
+                        position = 1;
+                    }
+
+                    // null = edge of slider
+                    if (position !== null) {
+                        setSliderHandle(handle, value + position);
+                    }
+
+                    break;
+
+                    case 40:
+                    position = step[0];
+
+                    if (position === false) {
+                        position = 1;
+                    }
+
+                    if (position !== null) {
+                        setSliderHandle(handle, value - position);
+                    }
+
+                    break;
+                }
+                });
+            });
+            /* end Listen to keypress on the input */
+            });
+            //ОТКРЫТИЕ ВЫБОР ГОРОДА 
+            let openCityItem = document.querySelector('.header__desctop-nav__info__city__button')
+            openCityItem.addEventListener('click', function() {
+                document.querySelector('.city-network__city-list').classList.toggle('city-network__city-list-active')
+            })
+            
+            let itemCity = document.querySelectorAll('.city-network__city-item')
+            for(let i = 0; i < itemCity.length; i++) {
+                itemCity[i].addEventListener('click', function() {
+                    let target = event.target;
+                    let plet = target.dataset.networkcity
+                    document.querySelector('.header__desctop-nav__info__city__button').innerHTML = plet
+                    document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
+                })
+            }
         </script>
     </body>
 </html>
