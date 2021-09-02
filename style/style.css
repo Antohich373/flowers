@@ -11,7 +11,18 @@ body {
 .body-active {
     height: 100vh;
     overflow-y: hidden;
-    padding-right: 15px;
+    position: fixed;
+}
+
+@media(min-width: 960px) {
+    .body-active {
+        padding-right: 15px;
+    }
+}
+
+.body-actives {
+    height: 100vh;
+    overflow-y: hidden;
     position: fixed;
 }
 
@@ -720,24 +731,42 @@ input[type="radio"].visually-hidden {
 }
 
 .shadow-mode {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.64);    
     z-index: 3;
-    top: 0;
+    top: 0px;
     left: 0;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+}
+
+.shadow-modes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.64);    
+    z-index: 3;
+    top: 0px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+
 }
 
 .shadow-mode-active {
-    display: block;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.6s;
 }
 
 .shadow-mode-active-desctop-nav {
-    display: block;
-    top: 200px;
-    position: absolute;
+    opacity: 1;
+    pointer-events: all;
+    top: 150px;
+    transition: opacity 0.6s;
 }
 
 
@@ -7129,8 +7158,8 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 768px) {
     .successfully {
-        padding-top: 181px;
-        padding-bottom: 262px;
+        padding-top: 151px;
+        padding-bottom: 202px;
     }
 }
 

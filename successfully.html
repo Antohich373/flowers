@@ -25,7 +25,9 @@
                             <span class="header__mobile__nav__logo__discription">Дискришн</span>
                         </div>
                     </a>
-
+                    <!-- Кнопка входа или регистрации -->
+                    <button class="header__mobile__nav__button-register">Войти</button>
+                    <!-- ИМЯ ПОЛЬЗВАТЕЛЯ -->
                     <button class="header__toggle main-button" type="button"></button>          
                     <button class="header__toggle main-button-desctop main-button-desctop-basket" type="button"></button>                
                 </div>
@@ -44,10 +46,10 @@
                                 <span>Ваш город</span>
                                 <button class="button-city-open" type="button">Киров</button>                                
                             </div>
-                            <div class="city-not-network">
+                            <!-- <div class="city-not-network">
                                 <span>Наш адрес</span>
                                 <p>г.Киров, ул. Ленина, 102А</p>                                
-                            </div>
+                            </div> -->
                         </li>
                         <li class="header__mobile-nav__main__item header__mobile-nav__main__item__bonus">
                             <span>Роман</span>
@@ -171,15 +173,26 @@
 
         </main>
         <div class="shadow-mode"></div>
+        <div class="shadow-modes"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
         <script>
+            //ИЗМЕНЕННАЯ АНИМАЦИЯ ПОВЛЕНИЯ МЕНЮ ДЛЯ КОРЗИНЫ
             let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
             buttonOpenNavDesctopBasket.addEventListener('click', function(evt) {
                 evt.preventDefault();
                 document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
                 document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
+                bodys.classList.toggle('body-actives')
             })  
+
+            let shadows = document.querySelector('.shadow-mode')
+            shadows.addEventListener('click', function() {
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action-basket')
+                shadow.classList.remove('shadow-mode-active-desctop-nav')
+                bodys.classList.remove('body-actives')
+            })
+            
         </script>
     </body>
 </html>
