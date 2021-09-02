@@ -89,10 +89,14 @@ let closeButtonPopular = document.querySelector('.button-close-popular')
 closeInternalNav(closeButtonPopular, navPopular, 'header__mobile-nav__popular-active')
 
 //ОТКРЫТЬ НАВГИАЦИЮ ДЕСКТОП
-
 let buttonOpenNavDesctop = document.querySelector('.main-button-desctop')
 buttonOpenNavDesctop.addEventListener('click', function(evt) {
     evt.preventDefault();
     document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action')
-    bodys.classList.toggle('body-active')
+    shadow.classList.toggle('shadow-mode-active-desctop-nav')
 })  
+
+shadow.addEventListener('click', function() {
+    document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
+    shadow.classList.remove('shadow-mode-active-desctop-nav')
+})

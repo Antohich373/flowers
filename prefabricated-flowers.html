@@ -16,7 +16,7 @@
         <header class="header">
             <div class="header__mobile wrap">
                 <div class="header__mobile__nav">
-                    <a href="#" class="header__mobile__nav__logo">
+                    <a href="index.html" class="header__mobile__nav__logo">
                         <picture>
                             <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
                             <img src="image/header/logo-mobile.png" width="31" height="31"> 
@@ -291,7 +291,441 @@
                         <li class="catalog__category__item"><button class="catalog__category__item__button" type="button">Бизнес букеты</button></li>
                     </ul>
                 </div>
-               <div class="catalog__wrap catalog__prefabricated-flowers wrap">
+                <div class="catalog__wrap catalog__prefabricated-flowers wrap">
+                    <div class="filter">
+                        <div class="filter__header">
+                            <h2>Фильтр</h2>    
+                            <div></div>                        
+                        </div>
+                        <div class="filter__forms">
+                            <form class="filter__form">
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Цена</h2>
+                                    <ul class="filter__form__type__list filter__form__type__list-range">
+                                        <li class="filter__form__type__item filter__form__type__item-range">
+                                            <div class="filter__form-range style-2 wrapper m-b-50 p-l-r">
+                                                <div class="filter__form-range-wrap-input">
+                                                    <input type="text" class="input-with-keypress-0">
+                                                    <input type="text" class="input-with-keypress-1">                                            
+                                                </div>
+                                                <div class="slider-keypress m-b-20"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>  
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Тип букета</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="all" id="all">
+                                            <label for="all">Все</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="from-roses" id="from-roses">
+                                            <label for="from-roses">Из роз</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="combined" id="combined">
+                                            <label for="combined">Сборный</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="composition" id="composition">
+                                            <label for="composition">Композиция</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="piece" id="piece">
+                                            <label for="piece">Цветы поштучно</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Событие</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="simply" id="simply">
+                                            <label for="simply">Просто так</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="march" id="march">
+                                            <label for="march">8 марта</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="birthday" id="birthday">
+                                            <label for="birthday">День рождения</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="date" id="date">
+                                            <label for="date">Свидание</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="anniversary" id="anniversary">
+                                            <label for="anniversary">Юбилей</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Кому</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="matter" id="matter">
+                                            <label for="matter">Не важно</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="mom" id="mom">
+                                            <label for="mom">Маме</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="wife" id="wife">
+                                            <label for="wife">Жене</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="girl" id="girl">
+                                            <label for="girl">Девушке</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="colleague" id="colleague">
+                                            <label for="colleague">Коллеге</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="men" id="men">
+                                            <label for="men">Мужчине</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Гамма</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="gentle" id="gentle">
+                                            <label for="gentle">Нежная</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="bright" id="bright">
+                                            <label for="bright">Яркая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="red" id="red">
+                                            <label for="red">Красная</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="pink" id="pink">
+                                            <label for="pink">Розовая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="yellow" id="yellow">
+                                            <label for="yellow">Желтая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="orange" id="orange">
+                                            <label for="orange">Оранжевая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="burgundy" id="burgundy">
+                                            <label for="burgundy">Бордовая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="purple" id="purple">
+                                            <label for="purple">Фиолетовая</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="blue" id="blue">
+                                            <label for="blue">Синяя</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="white" id="white">
+                                            <label for="white">Белая</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__form__type">
+                                    <h2 class="filter__form__type__header filter__form__type__header-active">Особенности</h2>
+                                    <ul class="filter__form__type__list">
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="hit" id="hit">
+                                            <label for="hit">Хиты продаж</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="action" id="action">
+                                            <label for="action">Акции</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="new" id="new">
+                                            <label for="new">Новинки</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="reviews" id="reviews">
+                                            <label for="reviews">С отзывами</label>
+                                        </li>
+                                        <li class="filter__form__type__item">
+                                            <input class="filter__form__type__item__input visually-hidden" type="checkbox" name="bonus" id="bonus">
+                                            <label for="bonus">Оплата бонусами</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="filter__close" type="button">
+
+                                </button>
+                                <div class="filter__reset">
+                                    <button class="filter__reset__button" type="button">Сбросить</button>
+                                    <button class="filter__show__button" type="button">Показать 85</button>
+                                </div>
+                            </form>
+                        </div>
+                        <button type="button" class="desctop-reset-all">Сбросить все фильтры</button>
+                        <div class="desctop-reset">Сбросить</div>
+                    </div>
+                    <div>
+                        <ul class="catalog__list">
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <!-- <button class="catalog__item__basket" type="button"></button> -->
+                                        <div class="catalog__item__basket-plus">
+                                            <button class="catalog__item__basket-plus__minus" type="button">-</button>
+                                            <p class="catalog__item__basket-plus__number">1</p>
+                                            <button class="catalog__item__basket-plus__plus" type="button">+</button>
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-2.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-3.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-4.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Фантастический букет</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-5.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Трехцветный летный букет</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item catalog-item-help">
+                                <h2 class="catalog-item-help__header">Не можете подобрать букет?</h2>
+                                <p class="catalog-item-help__text">Тогда воспользуйтесь услугами нашего флориста, способного создать и подобрать цветочную композицию для любого повода.</p>
+                                <button class="catalog-item-help__button" type="button">Подобрать букет</button>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-6.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-7.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-8.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">1 350 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-9.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <a href="product-page.html">
+                                    <img class="catalog__item__image" src="image/catalog/image-catalog-10.jpg" width="112" height="108" alt="Картинка товара">
+                                </a>
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <div class="catalog__item__price-box">
+                                            <span class="catalog__item__old-price">1 950 ₽</span>
+                                            <span class="catalog__item__price">1 350 ₽</span>
+                                        </div>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                                <span class="catalog__item__discount">
+
+                                </span>
+                                <div class="catalog__item__discount__price">
+                                   <h2 class="catalog__item__discount__price__header">Очень приятная скидка 23%</h2> 
+                                   <p class="catalog__item__discount__price__past">Старая цена <span>1950₽</span></p>
+                                   <p class="catalog__item__discount__price__new">Новая цена 1350₽</p>
+                                   <p class="catalog__item__discount__price__economy">Вы экономите 600₽</p>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <img class="catalog__item__image" src="image/catalog/image-catalog-11.jpg" width="112" height="108" alt="Картинка товара">
+                                <div class="catalog__item__container-text">
+                                    <h2 class="catalog__item__header">Большой букет из роз</h2>
+                                    <p class="catalog__item__subtitle">25 красных роз, зелень и упаковка</p>
+                                    <div class="catalog__item__price-container">
+                                        <span class="catalog__item__price">890 ₽</span>
+                                        <button class="catalog__item__basket" type="button"></button>
+                                    </div>                                
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="catalog__bread__crumbs catalog__bread__crumbs-page-catalog">
+                            <button class="catalog__bread__crumbs__still" type="button"><p>Показать еще</p></button>
+                            <ul class="catalog__bread__crumbs__list">
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-ferst"><a href="#"></a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-prev"><a href="#"></a></li>
+                                <li class="catalog__bread__crumbs__item"><a href="#">1</a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-active"><a href="#">2</a></li>
+                                <li class="catalog__bread__crumbs__item"><a href="#">3</a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-next"><a href="#"></a></li>
+                                <li class="catalog__bread__crumbs__item catalog__bread__crumbs__item-last"><a href="#"></a></li>
+                            </ul>
+                            <div class="catalog__bread__crumbs__page">
+                                <p>Показано: с 1 по 15 из 46</p>
+                                <span>(всего 4 страниц)</span>
+                            </div>
+                        </div>                        
+                    </div>
+
+               </div>
+               <!-- <div class="catalog__wrap catalog__prefabricated-flowers wrap">
                     <div class="filter">
                         <div class="filter__header">
                             <h2>Фильтр</h2>    
@@ -653,7 +1087,7 @@
                         </div>                        
                     </div>
 
-               </div>
+               </div> -->
            </section>
            <section class="how-choose wrap">
                 <h2 class="how-choose__heaader">Сборные букеты, как выбрать</h2>
@@ -1111,6 +1545,13 @@
                     document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
                 })
             }
+
+            //ЗАКРЫТИЕ ВСПЫВАЮЩЕГО МЕНЮ ВЫБОРА ГОРОДА
+            document.onclick = function(e){
+                if ( event.target.className != 'header__desctop-nav__info__city__button') {
+                    document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
+                };
+            };
         </script>
     </body>
 </html>

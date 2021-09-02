@@ -15,7 +15,7 @@
         <header class="header">
             <div class="header__mobile wrap">
                 <div class="header__mobile__nav">
-                    <a href="#" class="header__mobile__nav__logo">
+                    <a href="index.html" class="header__mobile__nav__logo">
                         <picture>
                             <source media="(min-width: 960px)" srcset="image/header/logo-desctop.png" width='58' height='58'>
                             <img src="image/header/logo-mobile.png" width="31" height="31"> 
@@ -509,6 +509,7 @@
                     swiper: {
                         el: '.product-page-min-container',
                         slidesPerView: 3,
+                        spaceBetween: 16,
                     }
                 }
             });
@@ -566,6 +567,13 @@
                     document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
                 })
             }
+
+            //ЗАКРЫТИЕ ВСПЫВАЮЩЕГО МЕНЮ ВЫБОРА ГОРОДА
+            document.onclick = function(e){
+                if ( event.target.className != 'header__desctop-nav__info__city__button') {
+                    document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
+                };
+            };
         </script>
     </body>
 </html>

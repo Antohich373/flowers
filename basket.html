@@ -298,9 +298,9 @@
             </section>
             <section class="result">
                 <div class="result__wrap basket-wrap">
-                    <!-- <div class="result__text">
+                    <div class="result__text">
                         Вы получите <span>36 бонусов</span>  с этого заказа. Сможете потратить на следующий 
-                    </div> -->
+                    </div>
                     <div class="range-sacket__basket range-sacket style-1 wrapper m-b-50 m-t-50 p-l-r">
                         <p class="range-sacket__text">Ваши бонусы: 56</p>
                         <div class="slider-range m-b-20"></div>
@@ -409,7 +409,8 @@
         </div>
 
         <!-- ОКНО ЕСЛИ ТЫ ПЕРВЫЙ РАЗ -->
-        <div class="first-time__wrap first-time__wrap-active">
+        <!-- first-time__wrap-active -->
+        <div class="first-time__wrap ">
             <div class="first-time">
                 <div class="first-time__text">
                     <h2 class="first-time__text__header">Войдите, что бы получить <span>36 бонусов</span>  с этого заказа</h2>
@@ -563,7 +564,7 @@
                 <div class="gift-window__close"></div>
             </div>
         </div>
-        <div class="shadow-mode shadow-mode-active"></div>
+        <div class="shadow-mode"></div>
         <script  src="https://api-maps.yandex.ru/2.1/?apikey=f0d69f8c-8308-41f2-b6c3-3986df4819bb&lang=ru_RU" type="text/javascript"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
@@ -684,6 +685,12 @@
                 document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
                 document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
             })  
+
+            let shadows = document.querySelector('.shadow-mode')
+            shadows.addEventListener('click', function() {
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action-basket')
+                shadow.classList.remove('shadow-mode-active-desctop-nav')
+            })
 
             const swipers = new Swiper('.recommended-slide-container', {
                 // Optional parameters

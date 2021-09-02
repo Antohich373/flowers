@@ -169,7 +169,7 @@
             </ul>
         </section>
         <section class="place-order place-order-wrap">
-            <h2 class="place-order__header">Оформление заказа</h2>
+            <h2 class="place-order__header place-order__header">Оформление заказа</h2>
             <form method="POST">
                 <div class="place-order__who-deliver">
                     <div class="place-order__who-deliver__box place-order__who-deliver__box-i">
@@ -331,7 +331,7 @@
                 <div class="your-number">
                     <h2 class="your-number__header">Ваш телефон</h2>
                     <!-- ТЕКСТ ЕСЛИ ДОСТАВИТ КУРЬЕР -->
-                    <p class="your-number__text">Позвоним вам и расскажем как всё прошло</p>
+                    <!-- <p class="your-number__text">Позвоним вам и расскажем как всё прошло</p> -->
                     <div class="your-number__input-box">
                         <p class="your-number__input-box-text">Телефон</p>
                         <input type="tel" class="your-number__input" placeholder="8 (912) 738 69-42">
@@ -391,9 +391,15 @@
             let buttonOpenNavDesctopBasket = document.querySelector('.main-button-desctop-basket')
             buttonOpenNavDesctopBasket.addEventListener('click', function(evt) {
                 evt.preventDefault();
-                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action');
-                document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket');
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action')
+                document.querySelector('.header__desctop-navigation').classList.toggle('header__desctop-navigation-action-basket')
             })  
+
+            let shadows = document.querySelector('.shadow-mode')
+            shadows.addEventListener('click', function() {
+                document.querySelector('.header__desctop-navigation').classList.remove('header__desctop-navigation-action-basket')
+                shadow.classList.remove('shadow-mode-active-desctop-nav')
+            })
 
             //СЧЕТЧИК СИМВОЛОВ ЗАПИСКИ
             const ta = document.querySelector('.note__textarea'); // textarea
@@ -470,12 +476,12 @@
         let giveCourier = document.getElementById('give-courier');
         giveCourier.onchange = function () { // Отслеживаем изменение чекбокса
             if (giveCourier.checked == false){ // Если элемент не выбран, то
-                document.c('recipient__input recipient__input-name').disabled = false
-                document.querySelector('recipient__input recipient__input-tel').disabled = false
+                document.querySelector('recipient__input-name').disabled = false
+                document.querySelector('recipient__input-tel').disabled = false
                 document.querySelector('note__textarea').disabled = false
             } else {
-                document.querySelector('recipient__input recipient__input-name').disabled = true
-                document.querySelector('recipient__input recipient__input-tel').disabled = true
+                document.querySelector('recipient__input-name').disabled = true
+                document.querySelector('recipient__input-tel').disabled = true
                 document.querySelector('note__textarea').disabled = true
             }
         }

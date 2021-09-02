@@ -162,7 +162,7 @@ input[type="radio"].visually-hidden {
 @media(min-width: 960px) {
     .header__mobile__nav {
         padding-top: 9px;
-        padding-bottom: 13px;
+        padding-bottom: 8px;
     }  
 }
 
@@ -177,7 +177,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header__mobile__nav__logo img{
-    margin-right: 8px;
+    margin-right: 12px;
 }
 
 .header__mobile__nav__logo__text {
@@ -734,6 +734,14 @@ input[type="radio"].visually-hidden {
     display: block;
 }
 
+.shadow-mode-active-desctop-nav {
+    display: block;
+    top: 200px;
+    position: absolute;
+}
+
+
+
 .relative {
     position: relative;
 }
@@ -1194,7 +1202,7 @@ input[type="radio"].visually-hidden {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 330px;
+    min-width: 320px;
 }
 
 .header__desctop-nav__info__bell {
@@ -1436,7 +1444,7 @@ input[type="radio"].visually-hidden {
 @media(min-width: 960px) {
     .preview-slide {
         padding-top: 44px;
-        padding-bottom: 58px;
+        padding-bottom: 45px;
     }
 }
 
@@ -1868,13 +1876,13 @@ input[type="radio"].visually-hidden {
 
 /*МАГАЗИНЫ*/
 .shops {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 33px;
 }
 
 @media(min-width: 960px) {
     .shops {
-        padding-top: 80px;
+        padding-top: 70px;
         padding-bottom: 80px;
     }
 }
@@ -1896,7 +1904,7 @@ input[type="radio"].visually-hidden {
 }
 
 .shops__item:not(:nth-child(1)) {
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 .shops__list {
@@ -1929,7 +1937,7 @@ input[type="radio"].visually-hidden {
 
 .shops__item__image {
     width: 100%;
-    height: 150px;
+    height: 140px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -1949,7 +1957,7 @@ input[type="radio"].visually-hidden {
     line-height: 16px;
     letter-spacing: -0.02em;
     color: #121212;
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .shops__item__list__name {
@@ -1968,6 +1976,7 @@ input[type="radio"].visually-hidden {
     .shops__item__header {
         font-size: 20px;
         line-height: 24px;
+        margin-top: 12px;
     }
 }
 
@@ -2515,7 +2524,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 960px) {
     .bouquets-delivered {
-        margin-top: 80px;
+        margin-top: 114px;
     }
 }
 
@@ -2829,7 +2838,7 @@ input[type="radio"].visually-hidden {
 }
 @media(min-width: 960px) { 
     .footer {
-        padding-top: 48px;
+        padding-top: 30px;
         padding-bottom: 48px;
     }
 }
@@ -2994,6 +3003,10 @@ input[type="radio"].visually-hidden {
         width: 24px;
         height: 24px;
     }
+
+    .footer__list-navigation {
+        margin-top: 15px;
+    }
 }
 
 .footer__list-navigation .footer__item-navigation:nth-child(1) {
@@ -3049,7 +3062,7 @@ input[type="radio"].visually-hidden {
         align-items: center;
     }
     .footer__item-wrap:nth-child(1) {
-        margin-right: 60px;
+        margin-right: 40px;
     }
 
     .footer__item__cooperat {
@@ -3124,6 +3137,16 @@ input[type="radio"].visually-hidden {
     width: 40px;
     height: 40px;
     box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.catalog__item__basket:hover {
+    background: #FC8166;
+    border: 1px solid #FC8166;
+}
+
+.catalog__item__basket:hover::before {
+    color: #fff;
 }
 
 .catalog__item__basket::before {
@@ -3158,8 +3181,8 @@ input[type="radio"].visually-hidden {
     text-align: center;  
     color: #121212;
     background-color: inherit;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     box-sizing: border-box;
     width: 35px;
     position: relative;
@@ -3198,8 +3221,8 @@ input[type="radio"].visually-hidden {
     text-align: center;  
     color: #121212; 
     background-color: inherit;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     box-sizing: border-box;
     width: 35px;
     position: relative;
@@ -3348,6 +3371,17 @@ input[type="radio"].visually-hidden {
     margin-top: 18px;
 }
 
+@media(min-width: 960px) {
+    .catalog-item-help__text {
+        font-family: 'Inter', sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px; 
+        color: #4F4F4F;
+        margin-top: 22px;
+    }
+}
+
 .catalog-item-help__button {
     width: 100%;
     font-family: 'Inter', sans-serif;
@@ -3368,17 +3402,24 @@ input[type="radio"].visually-hidden {
 }
 
 @media(min-width: 960px) {
+    .catalog-item-help__button {
+        margin-top: 52px;
+    }
+}
+
+@media(min-width: 960px) {
     .catalog-item-help__header {
         font-size: 20px;
         line-height: 20px;
     }
 
     .catalog-item-help__header {
-        margin-top: 24px;
+        margin-top: 0px;
     }
 
     .catalog__item__basket {
         width: 120px;
+        height: 48px;
     }
 
     .catalog__item__basket::before {
@@ -3554,8 +3595,19 @@ input[type="radio"].visually-hidden {
     overflow: inherit;
 }
 
+@media(min-width: 768px) {
+    .filter__form__type__list-range {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .filter__form__type__header-active + .filter__form__type__list-range {
+        margin-top: 7px;
+    }
+}
+
 .filter__form__type__item:not(:nth-child(1)) {
-    margin-top: 6px;
+    margin-top: 0px;
 }
 
 .filter__form__type__item {
@@ -3566,6 +3618,14 @@ input[type="radio"].visually-hidden {
 .filter__form__type__item:hover {
     background: #FFF6F2;
     border-radius: 4px;
+}
+
+.filter__form__type__item-range:hover {
+    background: none;
+}
+
+.noUi-handle {
+    cursor: pointer;
 }
 
 .filter__form__type__item {
@@ -3677,6 +3737,12 @@ input[type="radio"].visually-hidden {
     position: relative;
 }
 
+@media(min-width: 768px) {
+    .catalog__category-filtr {
+        padding-top: 0px;
+    }
+}
+
 .catalog__category-filtr::before {
     position: absolute;
     content: '';
@@ -3706,6 +3772,10 @@ input[type="radio"].visually-hidden {
 
     .catalog__category-desctop {
         display: block;
+    }
+
+    .filter__form__type:nth-child(1) {
+        margin-top: 5px;
     }
 }
 
@@ -3963,7 +4033,11 @@ input[type="radio"].visually-hidden {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 34px;
+    margin-top: 25px;
+}
+
+.catalog__bread__crumbs-page-catalog {
+    margin-top: 60px;
 }
 
 .catalog__bread__crumbs__list {
@@ -4270,8 +4344,8 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 960px) {
     .product {
-        padding-top: 40px;
-        padding-bottom: 80px;
+        padding-top: 35px;
+        padding-bottom: 70px;
         display: grid;
         grid-template-columns: 512px 1fr;
         gap: 64px;
@@ -4324,13 +4398,13 @@ input[type="radio"].visually-hidden {
 }
 
 .product__discription__list {
-    margin-top: 12px;
+    margin-top: 0px;
     width: 182px;
 }
 
 @media(min-width: 960px) {
     .product__discription__list {
-        margin-top: 16px;
+        margin-top: 14px;
         width: 208px;
     }
 }
@@ -4341,7 +4415,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product__discription__item:not(:nth-child(1)) {
-    margin-top: 8px;
+    margin-top: 2px;
 }
 
 .product__discription__item__blick-text {
@@ -4455,7 +4529,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 960px) {
     .product__discription__price-block {
-        margin-top: 24px;
+        margin-top: 20px;
     }
 }
 
@@ -4566,6 +4640,8 @@ input[type="radio"].visually-hidden {
 .product-page-img--min {
     border-radius: 10px;
     object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
 .product-page-min-container {
@@ -4574,12 +4650,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 960px) {
     .product-page-min-container {
-        margin-top: 16px;
-    }
-
-    .product-page-img--min {
-        width: 159px;
-        height: 119px;
+        margin-top: 14px;
     }
 }
 
@@ -4592,7 +4663,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 736px) {
     .basket {
-        padding-top: 8px;
+        padding-top: 0px;
         padding-bottom: 56px;
     }
 }
@@ -4695,6 +4766,12 @@ input[type="radio"].visually-hidden {
 
 .basket__list {
     margin-top: 24px;
+}
+
+@media(min-width: 736px) {
+    .basket__list {
+        margin-top: 39px;
+    }  
 }
 
 .basket__item {
@@ -4848,6 +4925,16 @@ input[type="radio"].visually-hidden {
     object-fit: cover;
     border-radius: 8px;
     margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+@media(min-width: 768px) {
+    .basket__item__image {
+        width: 72px;
+        height: 54px;
+    } 
 }
 
 .basket__item__header {
@@ -5362,6 +5449,9 @@ input[type="radio"].visually-hidden {
     color: #E15354;
     margin-top: 10px;
 }
+.range-sacket__basket {
+    display: none;
+}
 
 .range-sacket__basket .slider-range {
     margin-top: 16px;
@@ -5424,13 +5514,15 @@ input[type="radio"].visually-hidden {
     line-height: 32px;
     letter-spacing: -0.02em;
     color: #121212;
+
+
 }
 
 @media(min-width: 768px) {
     .place-order__header {
         font-size: 64px;
         line-height: 72px;
-        margin-top: 8px;
+        margin-top: 0px;
     }
 }
 
@@ -5631,7 +5723,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 768px) {
     .delivery-address__city {
-        margin-top: 24px;
+        margin-top: 32px;
         padding: 20px 20px;
         padding-right: 40px;
     }
@@ -6008,7 +6100,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 768px) {
     .unknown-location {
-        margin-top: 24px;
+        margin-top: 30px;
     }
 
     .unknown-location label {
@@ -6116,7 +6208,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 768px) {
     .when-deliver {
-        margin-top: 48px;
+        margin-top: 58px;
     }
 }
 
@@ -6341,7 +6433,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 768px) {
     .your-number {
-        margin-top: 48px;
+        margin-top: 55px;
     }
 }
 
@@ -6453,6 +6545,10 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
 }
 
+.when-deliver__input-time-active::placeholder {
+    color: rgba(56, 56, 56, 0.32);
+}
+
 .payment-method {
     margin-top: 32px;
     padding-bottom: 38px;
@@ -6460,7 +6556,7 @@ input[type="radio"].visually-hidden {
 
 @media(min-width: 768px) {
     .payment-method {
-        margin-top: 56px;
+        margin-top: 53px;
         padding-bottom: 60px;
     }
 }
@@ -6735,7 +6831,7 @@ input[type="radio"].visually-hidden {
         max-width: 214px;
         padding-top: 20px;
         padding-bottom: 20px;
-        margin-top: 48px;
+        margin-top: 40px;
     }
 }
 
@@ -8806,6 +8902,10 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
 }
 
+.delivery-address__house-number-active::placeholder {
+    color: rgba(56, 56, 56, 0.32) !important;
+}
+
 .delivery-address__house-flat-active {
     color: rgba(56, 56, 56, 0.32) !important;
     background: rgba(0, 0, 0, 0.04) !important;
@@ -8815,6 +8915,10 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
 }
 
+.delivery-address__house-flat-active::placeholder {
+    color: rgba(56, 56, 56, 0.32) !important;
+}
+
 .delivery-address__house-input-street-active {
     color: rgba(56, 56, 56, 0.32) !important;
     background: rgba(0, 0, 0, 0.04) !important;
@@ -8822,6 +8926,10 @@ input[type="radio"].visually-hidden {
     pointer-events: none;
     cursor: pointer;
     box-sizing: border-box;
+}
+
+.delivery-address__house-input-street-active::placeholder {
+    color: rgba(56, 56, 56, 0.32) !important;
 }
 
 .when-deliver__data-active {
@@ -8837,4 +8945,22 @@ input[type="radio"].visually-hidden {
     background: #F6F6F6 !important;
     border-radius: 4px !important;
     color: rgba(56, 56, 56, 0.32) !important;
+}
+
+.log-account__form-password {
+    position: relative;
+}
+
+.log-account__form__link {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 16px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('https://snipp.ru/demo/495/view.svg') 0 0 no-repeat;
+}
+
+.log-account__form__link.view {
+    background: url('image/pasword-class.png') 0 0 no-repeat;
 }

@@ -294,7 +294,6 @@
                             <li data-sort="Обсуждаемые" class="catalog__sort__item">Обсуждаемые</li>
                         </ul>                     
                     </div>
- 
                 </div>  
                <div class="catalog__wrap wrap">
                     <div class="filter">
@@ -306,8 +305,8 @@
                             <form class="filter__form">
                                 <div class="filter__form__type">
                                     <h2 class="filter__form__type__header filter__form__type__header-active">Цена</h2>
-                                    <ul class="filter__form__type__list">
-                                        <li class="filter__form__type__item">
+                                    <ul class="filter__form__type__list filter__form__type__list-range">
+                                        <li class="filter__form__type__item filter__form__type__item-range">
                                             <div class="filter__form-range style-2 wrapper m-b-50 p-l-r">
                                                 <div class="filter__form-range-wrap-input">
                                                     <input type="text" class="input-with-keypress-0">
@@ -1056,7 +1055,7 @@
                     <input class="log-account__form__input log-account__form__input-tel" type="tel" name="" id="" placeholder="Телефон">
                     <div class="log-account__form-password">
                         <input class="log-account__form__input log-account__form__input-password" type="password" id="password-input" placeholder="Пароль">
-                        <a href="#" class="log-account__form__link"></a>
+                        <a  class="log-account__form__link" onclick="return show_hide_password(this);"></a>
                     </div>    
                     <a class="log-account__form__recover" href=""> Забыли пароль?</a>            
                     <button class="log-account__form__submit" type="submit"> Войти </button>
@@ -1129,6 +1128,7 @@
         </script>
         <script src="js/script.js"></script>
         <script>
+            
             //ОТКРЫТИЕ ЗАКРЫТИЕ ОКНА ВХОДА В АККАУНТ
             let buttonOpenRegister = document.querySelector('.header__desctop-nav__user__item-enter')
             buttonOpenRegister.addEventListener('click', function() {
@@ -1142,6 +1142,19 @@
                 document.querySelector('.shadow-mode').classList.remove('shadow-mode-active')
                 bodys.classList.remove('body-active')
             })
+
+            //СКРЫТЬ ПОКАЗАТЬ ПАРОЛЬ
+            function show_hide_password(target){
+                var input = document.getElementById('password-input');
+                if (input.getAttribute('type') == 'password') {
+                    target.classList.add('view');
+                    input.setAttribute('type', 'text');
+                } else {
+                    target.classList.remove('view');
+                    input.setAttribute('type', 'password');
+                }
+                return false;
+            }
 
             //ОКНО РЕГИСТРАЦИИ
             let OpenRegistr = document.querySelector('.log-account__button')
@@ -1322,13 +1335,10 @@
 
             //ВЫСЛЫВАШКА ДЛЯ СОРТИРОВКИ
             let buttonOpenSort = document.querySelector('.catalog__sort__button')
-
             buttonOpenSort.addEventListener('click', function() {
                 document.querySelector('.catalog__sort__list').classList.toggle('catalog__sort__list-active')
             })
-
             let ItemSort = document.querySelectorAll('.catalog__sort__item')
-
             for(let i = 0; i < ItemSort.length; i++) {
                 ItemSort[i].addEventListener('click', function() {
                     let target = event.target;
@@ -1382,7 +1392,6 @@
                     el.checked = false;
                 });
             })
-
             document.querySelector('.filter__reset__button').addEventListener('click', function() {
                 let form = document.querySelector('.filter__form');
                 let checbox = form.querySelectorAll("input[type=checkbox]");
@@ -1478,12 +1487,14 @@
             });
             /* end Listen to keypress on the input */
             });
+
             //ОТКРЫТИЕ ВЫБОР ГОРОДА 
             let openCityItem = document.querySelector('.header__desctop-nav__info__city__button')
             openCityItem.addEventListener('click', function() {
                 document.querySelector('.city-network__city-list').classList.toggle('city-network__city-list-active')
             })
-            
+
+            //ВЫБОР ГОРОДА 
             let itemCity = document.querySelectorAll('.city-network__city-item')
             for(let i = 0; i < itemCity.length; i++) {
                 itemCity[i].addEventListener('click', function() {
@@ -1493,7 +1504,12 @@
                     document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
                 })
             }
-            
+            //ЗАКРЫТИЕ ВСПЫВАЮЩЕГО МЕНЮ ВЫБОРА ГОРОДА
+            document.onclick = function(e){
+                if ( event.target.className != 'header__desctop-nav__info__city__button') {
+                    document.querySelector('.city-network__city-list').classList.remove('city-network__city-list-active')
+                };
+            };
         </script>
     </body>
 </html>
