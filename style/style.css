@@ -4398,7 +4398,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product__discription__list {
-    margin-top: 0px;
+    margin-top: 12px;
     width: 182px;
 }
 
@@ -4415,8 +4415,15 @@ input[type="radio"].visually-hidden {
 }
 
 .product__discription__item:not(:nth-child(1)) {
-    margin-top: 2px;
+    margin-top: 12px;
 }
+
+@media(min-width: 768px) {
+    .product__discription__item:not(:nth-child(1)) {
+        margin-top: 2px;
+    }
+}
+
 
 .product__discription__item__blick-text {
     font-family: 'Inter', sans-serif;
@@ -4881,10 +4888,23 @@ input[type="radio"].visually-hidden {
     position: relative;
 }
 
+.basket__item__block-button-minus {
+    position: relative;
+}
+
 .basket__item__block-price__bytton-desctop__plus span{
     position: absolute;
     width: 10px;
     height: 10px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.basket__item__block-button-minus span{
+    position: absolute;
+    width: 10px;
+    height: auto;
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
