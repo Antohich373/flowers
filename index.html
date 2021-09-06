@@ -315,6 +315,10 @@
                                                 <div class="slider-keypress m-b-20"></div>
                                             </div>
                                         </li>
+                                        <li class="filter__form__type__item filter__form__type__item__input-promotional-products">
+                                            <input class="filter__form__type__item__input  visually-hidden" type="checkbox" name="promotional-products" id="action">
+                                            <label for="action">Только акционные</label>
+                                        </li>
                                     </ul>
                                 </div>  
                                 <div class="filter__form__type">
@@ -1413,12 +1417,15 @@
                     el.checked = false;
                 });
             })
+
             document.querySelector('.desctop-reset-all').addEventListener('click', function() {
                 let form = document.querySelector('.filter__form');
-                let checbox = form.querySelectorAll("input[type=radio]");
+                let checbox = form.querySelectorAll("input[type=checkbox]");
                 checbox.forEach(function(el) {
                     el.checked = false;
                 });
+                document.querySelector('.input-with-keypress-0').value = '0'
+                document.querySelector('.input-with-keypress-1').value = '10000'
             })
             document.querySelector('.filter__reset__button').addEventListener('click', function() {
                 let form = document.querySelector('.filter__form');

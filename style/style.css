@@ -3757,6 +3757,7 @@ input[type="radio"].visually-hidden {
     top: 10px;
 }
 
+
 .filter__reset__button {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -7297,6 +7298,7 @@ input[type="radio"].visually-hidden {
 
 .filter__form-range .slider-keypress {
     margin-top: 25px;
+    margin-bottom: 16px;
 }
 @media(min-width: 960px) {
     .botton__navigation-mobile {
